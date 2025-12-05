@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Enzo Ferrier</title>
+  <meta name="description" content="Portfolio d'Enzo Ferrier, étudiant ingénieur en Intelligence Artificielle spécialisé en e-santé.">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Portfolio - Enzo Ferrier">
+  <meta property="og:description" content="Étudiant ingénieur en IA & e-santé à ISIS Castres.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Navigation principale -->
+  <header class="site-header" id="top">
+    <nav class="navbar" aria-label="Navigation principale">
+      <a href="#top" class="navbar__brand" aria-label="Retour en haut de page">
+        <span class="navbar__logo">EF</span>
+        <span class="navbar__title">Enzo Ferrier</span>
+      </a>
+      <button class="navbar__toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span class="navbar__toggle-line"></span>
+        <span class="navbar__toggle-line"></span>
+      </button>
+      <ul class="navbar__links">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#experience">Expériences</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Section Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__content container">
+        <div class="hero__text">
+          <p class="hero__kicker">Étudiant ingénieur · IA & E-santé</p>
+          <h1 id="hero-title">Enzo Ferrier</h1>
+          <p class="hero__subtitle">
+            Étudiant en 4e année à <strong>ISIS Castres</strong>, spécialisé en
+            <strong>Intelligence Artificielle</strong> et <strong>Systèmes d'information en santé</strong>.
+            Je conçois des solutions alliant <strong>IA</strong>, <strong>données</strong> et
+            <strong>e-santé</strong> pour améliorer les parcours de soins.
+          </p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">Voir mes projets</a>
+            <a href="#contact" class="btn btn--ghost">Me contacter</a>
+          </div>
+          <ul class="hero__meta" aria-label="Informations principales">
+            <li>📍 Castres, Occitanie, France</li>
+            <li>🎓 ISIS Castres (2023–2026)</li>
+            <li>💡 IA, data & e-santé</li>
+          </ul>
+        </div>
+        <div class="hero__visual">
+          <div class="hero__avatar">
+            <img src="assets/images/portrait.jpg" alt="Portrait d'Enzo Ferrier" />
+          </div>
+          <p class="hero__note">
+            Portfolio en cours d'évolution — n'hésite pas à revenir bientôt pour découvrir de nouveaux projets.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="about" class="section section--alt" aria-labelledby="about-title">
+      <div class="container section__inner">
+        <header class="section__header">
+          <p class="section__kicker">À propos</p>
+          <h2 id="about-title">Qui suis-je&nbsp;?</h2>
+        </header>
+        <div class="grid grid--2-cols">
+          <div>
+            <p>
+              Je suis <strong>étudiant ingénieur en 4e année</strong> à ISIS Castres, spécialité
+              <strong>Intelligence Artificielle</strong>. Je m&apos;intéresse particulièrement à
+              l&apos;application de l&apos;IA et de la data pour <strong>améliorer la santé</strong>,
+              les <strong>workflows hospitaliers</strong> et le quotidien des soignants.
+            </p>
+            <p>
+              Au travers de projets académiques et d&apos;expériences professionnelles en milieu hospitalier, je
+              développe une double compétence <strong>technique</strong> (ML, Python, architectures e-santé) et
+              <strong>métier</strong> (IAM, SI hospitaliers, ergonomie des postes de travail).
+            </p>
+          </div>
+          <div>
+            <ul class="about-list">
+              <li><strong>Spécialité :</strong> IA, Machine Learning, Data science en santé</li>
+              <li><strong>Domaine :</strong> Systèmes d&apos;information hospitaliers & e-santé</li>
+              <li><strong>Qualités :</strong> Autonomie, rigueur, esprit d&apos;équipe en contexte hospitalier</li>
+              <li><strong>Centres d&apos;intérêt :</strong> Tennis, jeux vidéo, IA éthique, innovation en santé</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <div class="container section__inner">
+        <header class="section__header">
+          <p class="section__kicker">Compétences</p>
+          <h2 id="skills-title">Ce que je sais faire</h2>
+        </header>
+
+        <div class="skills-grid">
+          <article class="card skill-card">
+            <h3>IA & Data Science</h3>
+            <p>Conception de modèles de Machine Learning appliqués à la santé.</p>
+            <ul class="tag-list" aria-label="Technologies IA & Data">
+              <li>Python</li>
+              <li>Scikit-learn</li>
+              <li>Analyse prédictive</li>
+              <li>Traitement de données santé</li>
+            </ul>
+          </article>
+
+          <article class="card skill-card">
+            <h3>Systèmes d&apos;information en santé</h3>
+            <p>Compréhension des architectures SI hospitalières et des workflows métier.</p>
+            <ul class="tag-list" aria-label="Compétences SI santé">
+              <li>IAM</li>
+              <li>Workflows hospitaliers</li>
+              <li>Interopérabilité</li>
+              <li>E-santé</li>
+            </ul>
+          </article>
+
+          <article class="card skill-card">
+            <h3>Développement & DevOps</h3>
+            <p>Développement d&apos;applications et déploiement de solutions techniques.</p>
+            <ul class="tag-list" aria-label="Compétences développement">
+              <li>Python</li>
+              <li>SQL</li>
+              <li>Docker</li>
+              <li>Web (HTML/CSS/JS)</li>
+            </ul>
+          </article>
+
+          <article class="card skill-card">
+            <h3>Gestion de projet & Soft skills</h3>
+            <p>Travail en équipe pluridisciplinaire et coordination en environnement hospitalier.</p>
+            <ul class="tag-list" aria-label="Compétences non techniques">
+              <li>Coordination</li>
+              <li>Autonomie</li>
+              <li>Communication</li>
+              <li>Esprit d&apos;analyse</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="languages">
+          <h3>Langues</h3>
+          <ul class="languages-list" aria-label="Compétences linguistiques">
+            <li><span>Français</span><span class="languages-list__level">Natif</span></li>
+            <li><span>Anglais</span><span class="languages-list__level">Bon niveau</span></li>
+            <li><span>Espagnol</span><span class="languages-list__level">Notions</span></li>
+            <li><span>Chinois</span><span class="languages-list__level">Notions</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projects" class="section section--alt" aria-labelledby="projects-title">
+      <div class="container section__inner">
+        <header class="section__header">
+          <p class="section__kicker">Projets</p>
+          <h2 id="projects-title">Sélection de projets</h2>
+          <p class="section__subtitle">Une partie de mes projets académiques et personnels autour de l&apos;IA, du web et de l&apos;e-santé.</p>
+        </header>
+
+        <div class="projects-grid">
+          <!-- Projet 1 : Nuit de l'Info -->
+          <article class="card project-card" data-scroll>
+            <div class="project-card__header">
+              <h3>Nuit de l&apos;Info 2024-2025 – Village Numérique Résistant</h3>
+              <p class="project-card__role">Rôle : Développeur principal</p>
+            </div>
+            <p>
+              Participation à la <strong>Nuit de l&apos;Info</strong> avec la réalisation d&apos;une application web autour du thème
+              &laquo;&nbsp;Village Numérique Résistant&nbsp;&raquo;. Conception de l&apos;interface, intégration responsive et mise en place de fonctionnalités
+              interactives.
+            </p>
+            <p>
+              Le projet met en avant la <strong>résilience numérique</strong> d&apos;un village connecté, avec un souci d&apos;ergonomie et
+              d&apos;accessibilité.
+            </p>
+            <ul class="tag-list" aria-label="Technologies utilisées pour Nuit de l'Info">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+            </ul>
+            <div class="project-card__actions">
+              <a class="btn btn--link" href="https://nuitdelinfo.alexisdechenais.fr/" target="_blank" rel="noopener noreferrer">Voir la démo</a>
+              <a class="btn btn--ghost" href="https://github.com/eferrier81/Nuit-de-l-info-2025" target="_blank" rel="noopener noreferrer">Voir le code (GitHub)</a>
+            </div>
+          </article>
+
+          <!-- Projet 2 : ALPOS avec diaporama -->
+          <article class="card project-card" data-scroll>
+            <div class="project-card__header project-card__header--with-logo">
+              <div>
+                <h3>ALPOS – Grand Prix Sprint E-Santé</h3>
+                <p class="project-card__role">Rôle : Développeur IA</p>
+              </div>
+              <!-- Remplacez le placeholder par le vrai logo dans assets/projects/alpos-logo.png -->
+              <div class="project-card__logo">
+                <img src="assets/projects/alpos-logo.png" alt="Logo de la solution ALPOS" />
+              </div>
+            </div>
+
+            <div class="slideshow" aria-label="Diaporama de présentation du projet ALPOS">
+              <div class="slideshow__slides" id="alpos-slides">
+                <div class="slideshow__slide slideshow__slide--active">
+                  <h4>Contexte</h4>
+                  <p>
+                    ALPOS est un projet de <strong>reconnaissance de mauvaises postures</strong> pour les aides à domicile,
+                    afin de prévenir les troubles musculo-squelettiques et améliorer l&apos;ergonomie au travail.
+                  </p>
+                </div>
+                <div class="slideshow__slide">
+                  <h4>Approche IA</h4>
+                  <p>
+                    Conception et entraînement de modèles de <strong>Machine Learning</strong> à partir de données de
+                    mouvements, expérimentation de plusieurs algorithmes et construction d&apos;un pipeline de traitement.
+                  </p>
+                </div>
+                <div class="slideshow__slide">
+                  <h4>Impact & e-santé</h4>
+                  <p>
+                    Contribution à l&apos;innovation en <strong>e-santé</strong> en proposant un outil d&apos;analyse ergonomique
+                    au service des soignants et des structures d&apos;aide à domicile, avec une réflexion sur
+                    l&apos;<strong>éthique de l&apos;IA</strong> en santé.
+                  </p>
+                </div>
+              </div>
+
+              <div class="slideshow__controls">
+                <button class="slideshow__btn" type="button" data-slideshow-prev="alpos" aria-label="Slide précédente">
+                  ◀
+                </button>
+                <div class="slideshow__dots" id="alpos-dots" aria-label="Navigation dans le diaporama"></div>
+                <button class="slideshow__btn" type="button" data-slideshow-next="alpos" aria-label="Slide suivante">
+                  ▶
+                </button>
+              </div>
+            </div>
+
+            <ul class="tag-list" aria-label="Technologies utilisées pour ALPOS">
+              <li>Python</li>
+              <li>Machine Learning</li>
+              <li>Data science</li>
+            </ul>
+            <div class="project-card__actions">
+              <!-- À remplacer par le lien GitHub du projet ALPOS si disponible -->
+              <a class="btn btn--ghost" href="https://github.com/eferrier81" target="_blank" rel="noopener noreferrer">Voir le code (GitHub)</a>
+            </div>
+          </article>
+
+          <!-- Projet 3 : Projets académiques -->
+          <article class="card project-card" data-scroll>
+            <div class="project-card__header">
+              <h3>Projets académiques – IA, Data & Web</h3>
+            </div>
+            <p>
+              Divers projets menés dans le cadre de ma formation à ISIS&nbsp;: analyse de données, prototypes de
+              <strong>tableaux de bord en santé</strong>, mini-applications web et travaux dirigés autour des
+              <strong>systèmes d&apos;information de santé</strong>.
+            </p>
+            <p>
+              Ces projets me permettent d&apos;explorer à la fois la partie <strong>algorithmique</strong> (ML, data) et la
+              <strong>mise en production</strong> (architecture, déploiement, UX).
+            </p>
+            <ul class="tag-list" aria-label="Technologies utilisées pour projets académiques">
+              <li>Python</li>
+              <li>SQL</li>
+              <li>Docker</li>
+              <li>HTML/CSS/JS</li>
+            </ul>
+            <div class="project-card__actions">
+              <a class="btn btn--link" href="https://github.com/eferrier81?tab=repositories" target="_blank" rel="noopener noreferrer">Voir mes repositories</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Expériences -->
+    <section id="experience" class="section" aria-labelledby="experience-title">
+      <div class="container section__inner">
+        <header class="section__header">
+          <p class="section__kicker">Expériences</p>
+          <h2 id="experience-title">Parcours professionnel</h2>
+        </header>
+
+        <ol class="timeline" aria-label="Chronologie des expériences professionnelles">
+          <li class="timeline__item" data-scroll>
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content card">
+              <h3>Stage – Centre Hospitalier Intercommunal Castres-Mazamet (CHIC)</h3>
+              <p class="timeline__period">Avril – Juin 2025 · Castres</p>
+              <p class="timeline__role">Thématique : Systèmes d&apos;information & IAM</p>
+              <ul>
+                <li>Étude et modélisation des <strong>workflows IAM</strong> pour les agents hospitaliers.</li>
+                <li>Analyse technique autour de <strong>Docker</strong> et <strong>Oracle</strong> pour le déploiement d&apos;outils.</li>
+                <li>Participation au <strong>Grand Prix Sprint E-Santé</strong> (projet ALPOS).</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item" data-scroll>
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content card">
+              <h3>Stage – INU Champollion / ISIS – Équipe CHART</h3>
+              <p class="timeline__period">Stage PlaniTime – 2026 · Castres</p>
+              <p class="timeline__role">Sujet : Jumeau numérique & interface tangible</p>
+              <ul>
+                <li>Participation au projet <strong>PlaniTime</strong> pour la formation à la planification de tâches en milieu hospitalier.</li>
+                <li>Conception d&apos;un <strong>jumeau numérique</strong> d&apos;un service clinique et d&apos;une interface tangible type plateau de jeu.</li>
+                <li>Développement d&apos;un prototype hybride mêlant <strong>technologies web</strong> et <strong>IoT</strong> (objets tangibles connectés, RFID, etc.).</li>
+                <li>Suivi de la charge de travail et traçabilité des interactions dans une <strong>base de données</strong> pour analyse.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline__item" data-scroll>
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content card">
+              <h3>Stage ouvrier – Granits Michel MAFFRE</h3>
+              <p class="timeline__period">Mai 2023</p>
+              <p class="timeline__role">Manutention & traitement de matériaux</p>
+              <ul>
+                <li>Découverte du secteur industriel et du travail de la pierre.</li>
+                <li>Manutention, découpe et traitement de matériaux.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section section--alt" aria-labelledby="contact-title">
+      <div class="container section__inner contact">
+        <header class="section__header">
+          <p class="section__kicker">Contact</p>
+          <h2 id="contact-title">Travaillons ensemble</h2>
+          <p class="section__subtitle">
+            Intéressé(e) par un stage, une collaboration autour de l&apos;IA en santé ou simplement envie d&apos;échanger&nbsp;?
+            Laisse-moi un message.
+          </p>
+        </header>
+
+        <div class="grid grid--2-cols contact__grid">
+          <form class="contact-form" id="contact-form" aria-label="Formulaire de contact">
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input id="name" name="name" type="text" required autocomplete="name" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required autocomplete="email" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary">Envoyer</button>
+            <p class="form-status" id="form-status" aria-live="polite"></p>
+          </form>
+
+          <div class="contact-info">
+            <h3>Coordonnées</h3>
+            <ul class="contact-info__list">
+              <li>
+                <span class="contact-info__label">Email</span>
+                <a href="mailto:enzoferrier81120@gmail.com">enzoferrier81120@gmail.com</a>
+              </li>
+              <li>
+                <span class="contact-info__label">GitHub</span>
+                <a href="https://github.com/eferrier81" target="_blank" rel="noopener noreferrer">@eferrier81</a>
+              </li>
+              <li>
+                <span class="contact-info__label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/enzo-ferrier-b2844a253/" target="_blank" rel="noopener noreferrer">Profil LinkedIn</a>
+              </li>
+              <li>
+                <span class="contact-info__label">Localisation</span>
+                <span>Castres, Occitanie, France</span>
+              </li>
+            </ul>
+            <p class="contact-info__note">
+              Je suis ouvert aux opportunités de stage, alternance ou projets autour de l&apos;IA, de la data et de
+              l&apos;e-santé.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© <span id="year"></span> Enzo Ferrier · Tous droits réservés.</p>
+      <a href="#top" class="back-to-top">Retour en haut</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
