@@ -1,29 +1,42 @@
-// Gestion de la navbar mobile
+// ——— Navbar : scroll effect ———
+const siteHeader = document.querySelector(".site-header");
+
+if (siteHeader) {
+  const onScroll = () => {
+    siteHeader.classList.toggle("is-scrolled", window.scrollY > 40);
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+}
+
+// ——— Navbar : mobile toggle ———
 const navbarToggle = document.querySelector(".navbar__toggle");
 const navbarLinks = document.querySelector(".navbar__links");
 
 if (navbarToggle && navbarLinks) {
   navbarToggle.addEventListener("click", () => {
     const isOpen = navbarLinks.classList.toggle("is-open");
+    navbarToggle.classList.toggle("is-active", isOpen);
     navbarToggle.setAttribute("aria-expanded", String(isOpen));
   });
 
-  // Ferme le menu après un clic sur un lien
+  // Close menu when a link is clicked
   navbarLinks.addEventListener("click", (event) => {
     if (event.target instanceof HTMLAnchorElement) {
       navbarLinks.classList.remove("is-open");
+      navbarToggle.classList.remove("is-active");
       navbarToggle.setAttribute("aria-expanded", "false");
     }
   });
 }
 
-// Année dynamique dans le footer
+// ——— Dynamic year ———
 const yearSpan = document.getElementById("year");
 if (yearSpan) {
   yearSpan.textContent = String(new Date().getFullYear());
 }
 
-// Scroll reveal léger pour les éléments marqués [data-scroll]
+// ——— Scroll reveal with stagger support ———
 const scrollElements = document.querySelectorAll("[data-scroll]");
 
 if ("IntersectionObserver" in window && scrollElements.length > 0) {
@@ -38,6 +51,7 @@ if ("IntersectionObserver" in window && scrollElements.length > 0) {
     },
     {
       threshold: 0.1,
+      rootMargin: "0px 0px -40px 0px",
     }
   );
 
@@ -46,7 +60,7 @@ if ("IntersectionObserver" in window && scrollElements.length > 0) {
   scrollElements.forEach((el) => el.classList.add("is-visible"));
 }
 
-// Formulaire de contact : envoi réel via fetch vers un endpoint externe (type Formspree)
+// ——— Contact form (Formspree) ———
 const contactForm = document.getElementById("contact-form");
 const formStatus = document.getElementById("form-status");
 
@@ -120,7 +134,7 @@ if (contactForm) {
   });
 }
 
-// Diaporama ALPOS (slides + boutons + puces)
+// ——— Slideshow ALPOS ———
 function initSlideshow(idPrefix) {
   const slidesContainer = document.getElementById(`${idPrefix}-slides`);
   const dotsContainer = document.getElementById(`${idPrefix}-dots`);
@@ -134,7 +148,6 @@ function initSlideshow(idPrefix) {
 
   let currentIndex = 0;
 
-  // Création des puces
   slides.forEach((_, index) => {
     const dot = document.createElement("span");
     dot.className = "slideshow__dot" + (index === 0 ? " slideshow__dot--active" : "");

@@ -12,6 +12,9 @@
   <meta property="og:description" content="Étudiant ingénieur en IA & e-santé à ISIS Castres.">
   <meta property="og:type" content="website">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -40,33 +43,46 @@
   <main>
     <!-- Section Hero -->
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true"></div>
       <div class="hero__content container">
-        <div class="hero__text">
-          <p class="hero__kicker">Étudiant ingénieur · IA & E-santé</p>
-          <h1 id="hero-title">Enzo Ferrier</h1>
-          <p class="hero__subtitle">
-            Étudiant en 4e année à <strong>ISIS Castres</strong>, spécialisé en
-            <strong>Intelligence Artificielle</strong> et <strong>Systèmes d'information en santé</strong>.
-            Je conçois des solutions alliant <strong>IA</strong>, <strong>données</strong> et
-            <strong>e-santé</strong> pour améliorer les parcours de soins.
-          </p>
-          <div class="hero__actions">
-            <a href="#projects" class="btn btn--primary">Voir mes projets</a>
-            <a href="#contact" class="btn btn--ghost">Me contacter</a>
-          </div>
-          <ul class="hero__meta" aria-label="Informations principales">
-            <li>📍 Castres, Occitanie, France</li>
-            <li>🎓 ISIS Castres (2023–2026)</li>
-            <li>💡 IA, data & e-santé</li>
-          </ul>
+        <div class="hero__top">
+          <p class="hero__kicker" data-scroll>Étudiant ingénieur · IA & E-santé</p>
         </div>
-        <div class="hero__visual">
-          <div class="hero__avatar">
-            <img src="assets/images/portrait.jpg" alt="Portrait d'Enzo Ferrier" />
+        <div class="hero__headline" data-scroll>
+          <h1 id="hero-title" class="hero__name">
+            <span class="hero__name-line">Enzo</span>
+            <span class="hero__name-line hero__name-line--accent">Ferrier</span>
+          </h1>
+        </div>
+        <div class="hero__bottom">
+          <div class="hero__info" data-scroll>
+            <p class="hero__subtitle">
+              Étudiant en 4e année à <strong>ISIS Castres</strong>, spécialisé en
+              <strong>Intelligence Artificielle</strong> et <strong>Systèmes d'information en santé</strong>.
+              Je conçois des solutions alliant IA, données et e-santé pour améliorer les parcours de soins.
+            </p>
+            <div class="hero__actions">
+              <a href="#projects" class="btn btn--primary">Voir mes projets</a>
+              <a href="#contact" class="btn btn--ghost">Me contacter</a>
+            </div>
           </div>
-          <p class="hero__note">
-            Portfolio en cours d'évolution — n'hésite pas à revenir bientôt pour découvrir de nouveaux projets.
-          </p>
+          <div class="hero__visual" data-scroll>
+            <div class="hero__avatar">
+              <img src="assets/images/portrait.jpg" alt="Portrait d'Enzo Ferrier" />
+            </div>
+            <ul class="hero__meta" aria-label="Informations principales">
+              <li>Castres, Occitanie</li>
+              <li>ISIS Castres · 2023–2026</li>
+              <li>IA, Data & E-santé</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Marquee -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span class="marquee__content">Intelligence Artificielle — Machine Learning — Data Science — E-Santé — Python — Docker — DevOps — Systèmes d'Information —&nbsp;</span>
+          <span class="marquee__content">Intelligence Artificielle — Machine Learning — Data Science — E-Santé — Python — Docker — DevOps — Systèmes d'Information —&nbsp;</span>
         </div>
       </div>
     </section>
@@ -113,7 +129,7 @@
         </header>
 
         <div class="skills-grid">
-          <article class="card skill-card">
+          <article class="card skill-card" data-scroll data-scroll-delay="0">
             <h3>IA & Data Science</h3>
             <p>Conception de modèles de Machine Learning appliqués à la santé.</p>
             <ul class="tag-list" aria-label="Technologies IA & Data">
@@ -124,7 +140,7 @@
             </ul>
           </article>
 
-          <article class="card skill-card">
+          <article class="card skill-card" data-scroll data-scroll-delay="1">
             <h3>Systèmes d&apos;information en santé</h3>
             <p>Compréhension des architectures SI hospitalières et des workflows métier.</p>
             <ul class="tag-list" aria-label="Compétences SI santé">
@@ -135,7 +151,7 @@
             </ul>
           </article>
 
-          <article class="card skill-card">
+          <article class="card skill-card" data-scroll data-scroll-delay="2">
             <h3>Développement & DevOps</h3>
             <p>Développement d&apos;applications et déploiement de solutions techniques.</p>
             <ul class="tag-list" aria-label="Compétences développement">
@@ -146,7 +162,7 @@
             </ul>
           </article>
 
-          <article class="card skill-card">
+          <article class="card skill-card" data-scroll data-scroll-delay="3">
             <h3>Gestion de projet & Soft skills</h3>
             <p>Travail en équipe pluridisciplinaire et coordination en environnement hospitalier.</p>
             <ul class="tag-list" aria-label="Compétences non techniques">
