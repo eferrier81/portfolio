@@ -1,3 +1,13 @@
+// ——— Retour en haut ———
+// #top est porté par le header en position: fixed ; un lien d'ancre natif
+// vers un élément fixed ne scrolle pas (il est toujours "déjà visible").
+document.querySelectorAll('a[href="#top"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+
 // ——— Navbar : scroll effect ———
 const siteHeader = document.querySelector(".site-header");
 
