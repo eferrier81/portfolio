@@ -61,7 +61,7 @@
         <div class="hero__bottom">
           <div class="hero__info" data-scroll>
             <p class="hero__subtitle" data-i18n="hero-subtitle">
-              Étudiant en 4e année à <strong>ISIS Castres</strong>, en <strong>informatique</strong> spécialisé en
+              Étudiant en dernière année (5e année) à <strong>ISIS Castres</strong>, en <strong>informatique</strong> spécialisé en
               <strong>Systèmes d'information en santé</strong>, et suivant un parcours d'approfondissement en
               <strong>Intelligence Artificielle</strong>.
               Je conçois des solutions logicielles et data pour améliorer les parcours de soins.
@@ -77,7 +77,7 @@
             </div>
             <ul class="hero__meta" aria-label="Informations principales">
               <li data-i18n="hero-meta-location">Castres, Occitanie</li>
-              <li>ISIS Castres · 2023–2026</li>
+              <li>ISIS Castres · 2022–2027</li>
               <li data-i18n="hero-meta-field">Informatique & E-santé</li>
             </ul>
           </div>
@@ -102,7 +102,7 @@
         <div class="grid grid--2-cols">
           <div>
             <p data-i18n="about-p1">
-              Je suis <strong>étudiant ingénieur en 4e année</strong> à ISIS Castres, en
+              Je suis <strong>étudiant ingénieur en dernière année (5e année)</strong> à ISIS Castres, en
               <strong>informatique</strong>, spécialisé en <strong>Systèmes d&apos;information en santé</strong>.
               Je suis par ailleurs un parcours d&apos;approfondissement en <strong>Intelligence Artificielle</strong>,
               que je cherche à mettre au service de <strong>l&apos;amélioration de la santé</strong>,
@@ -149,6 +149,8 @@
               <li>Python</li>
               <li>SQL</li>
               <li>Docker</li>
+              <li>Kubernetes</li>
+              <li>CI/CD</li>
               <li>Web (HTML/CSS/JS)</li>
             </ul>
           </article>
@@ -339,26 +341,24 @@
           <li class="timeline__item" data-scroll>
             <div class="timeline__marker" aria-hidden="true"></div>
             <div class="timeline__content card">
-              <h3 data-i18n="t1-h3">Stage ouvrier – Granits Michel MAFFRE</h3>
-              <p class="timeline__period" data-i18n="t1-period">Mai 2023</p>
-              <p class="timeline__role" data-i18n="t1-role">Manutention & traitement de matériaux</p>
-              <ul>
-                <li data-i18n="t1-li1">Découverte du secteur industriel et du travail de la pierre.</li>
-                <li data-i18n="t1-li2">Manutention, découpe et traitement de matériaux.</li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="timeline__item" data-scroll>
-            <div class="timeline__marker" aria-hidden="true"></div>
-            <div class="timeline__content card">
               <h3 data-i18n="t2-h3">Stage – Centre Hospitalier Intercommunal Castres-Mazamet (CHIC)</h3>
-              <p class="timeline__period" data-i18n="t2-period">Avril – Juin 2025 · Castres</p>
-              <p class="timeline__role" data-i18n="t2-role">Thématique : Systèmes d&apos;information & IAM</p>
+              <p class="timeline__period" data-i18n="t2-period">Avril – Juin 2025 · Castres (8 semaines)</p>
+              <p class="timeline__role" data-i18n="t2-role">Thématique : Systèmes d&apos;information, IAM & infrastructure (DSI)</p>
               <ul>
-                <li data-i18n="t2-li1">Étude et modélisation des <strong>workflows IAM</strong> pour les agents hospitaliers.</li>
-                <li data-i18n="t2-li2">Analyse technique autour de <strong>Docker</strong> et <strong>Oracle</strong> pour le déploiement d&apos;outils.</li>
-                <li data-i18n="t2-li3">Participation au <strong>Grand Prix Sprint E-Santé</strong> (projet ALPOS).</li>
+                <li data-i18n="t2-li1">Étude et intégration des <strong>comptes jetons</strong> dans la solution <strong>IAM</strong> du CHIC, remplaçant un suivi papier par une gestion centralisée, sécurisée et auditable.</li>
+                <li data-i18n="t2-li2">Réalisation d&apos;un <strong>Proof of Concept</strong> de migration des bases <strong>Oracle</strong> vers des solutions conteneurisées&nbsp;: import d&apos;un dump Oracle 11g dans une base Oracle XE 11g sous <strong>Docker</strong>, puis reproduction sur Oracle 19c.</li>
+                <li data-i18n="t2-li3">Déploiement d&apos;un environnement virtualisé sous <strong>VMware ESXi</strong> (VM Ubuntu Server) et mise en place d&apos;un cluster <strong>Kubernetes</strong> mono-nœud hébergeant les bases Oracle conteneurisées.</li>
+                <li data-i18n="t2-li4">Développement de playbooks <strong>Ansible</strong> pour automatiser la préparation des VM, l&apos;installation de Kubernetes et le déploiement des bases Oracle conteneurisées.</li>
+              </ul>
+              <ul class="tag-list" aria-label="Technologies utilisées au CHIC">
+                <li>Docker</li>
+                <li>Kubernetes</li>
+                <li>VMware ESXi</li>
+                <li>Ansible</li>
+                <li>Oracle</li>
+                <li>Active Directory</li>
+                <li>LDAP</li>
+                <li>GLPI</li>
               </ul>
             </div>
           </li>
@@ -372,6 +372,14 @@
               <ul>
                 <li data-i18n="tmob-li1">Semestre d&apos;études à l&apos;étranger au sein du <strong>College of Computing</strong> de la Prince of Songkla University, dans le cadre du parcours d&apos;approfondissement en <strong>Intelligence Artificielle</strong>.</li>
                 <li data-i18n="tmob-li2">Immersion académique et interculturelle en Asie du Sud-Est, renforçant l&apos;ouverture internationale et la pratique de l&apos;anglais académique.</li>
+                <li data-i18n="tmob-li3">Semestre validé avec 19 crédits au total, incluant des cours de <strong>Cloud Computing and Implementation</strong>, <strong>Introduction to Machine Learning</strong>, <strong>Computer Security</strong>, <strong>Software Deployment and Maintenance</strong> et <strong>Discrete Mathematics</strong>.</li>
+              </ul>
+              <ul class="tag-list" aria-label="Cours suivis à la PSU">
+                <li>Cloud Computing</li>
+                <li>Machine Learning</li>
+                <li>Computer Security</li>
+                <li>Software Deployment</li>
+                <li>Discrete Mathematics</li>
               </ul>
             </div>
           </li>
@@ -380,7 +388,7 @@
             <div class="timeline__marker" aria-hidden="true"></div>
             <div class="timeline__content card">
               <h3 data-i18n="t3-h3">Stage – INU Champollion / ISIS – Équipe CHART</h3>
-              <p class="timeline__period" data-i18n="t3-period">Stage PlaniTime – 2026 · Castres</p>
+              <p class="timeline__period" data-i18n="t3-period">Stage PlaniTime – Juin–Septembre 2026 · Castres</p>
               <p class="timeline__role" data-i18n="t3-role">Sujet : Serious game hybride pour la formation en soins infirmiers</p>
               <ul>
                 <li data-i18n="t3-li1">Conception et développement de <strong>PlaniTime</strong>, un serious game physique/numérique formant les
@@ -461,16 +469,17 @@
               </li>
               <li>
                 <span class="contact-info__label">LinkedIn</span>
-                <a href="https://www.linkedin.com/in/enzo-ferrier-b2844a253/" target="_blank" rel="noopener noreferrer">Profil LinkedIn</a>
+                <a href="https://www.linkedin.com/in/enzo-ferrier-b2844a253/" target="_blank" rel="noopener noreferrer" data-i18n="contact-linkedin-text">Profil LinkedIn</a>
               </li>
               <li>
                 <span class="contact-info__label" data-i18n="label-location">Localisation</span>
-                <span>Castres, Occitanie, France</span>
+                <span data-i18n="location-value">Castres · mobile Toulouse</span>
               </li>
             </ul>
             <p class="contact-info__note" data-i18n="contact-note">
-              Je suis ouvert aux opportunités de stage, alternance ou projets autour de l&apos;informatique, de la data et de
-              l&apos;e-santé.
+              Actuellement à la recherche d&apos;un stage de fin d&apos;études de 22 à 26 semaines, disponible à partir de
+              janvier/février 2027. Je suis également ouvert aux opportunités de stage, alternance ou projets autour de
+              l&apos;informatique, de la data et de l&apos;e-santé.
             </p>
           </div>
         </div>
@@ -509,7 +518,7 @@
             </li>
             <li>
               <span class="cv-contact-list__label" data-i18n="label-location">Localisation</span>
-              <span>Castres, Occitanie, France</span>
+              <span data-i18n="location-value">Castres · mobile Toulouse</span>
             </li>
             <li>
               <span class="cv-contact-list__label">GitHub</span>
@@ -549,9 +558,9 @@
           <h2 data-i18n="label-skills">Compétences</h2>
           <ul class="cv-simple-list">
             <li data-i18n="cv-skill-1">Développement Python & Web</li>
-            <li>SQL, Docker, CI/CD</li>
+            <li data-i18n="cv-skill-2">Docker, Kubernetes, CI/CD</li>
             <li data-i18n="cv-skill-3">Systèmes d&apos;information santé & IAM</li>
-            <li>Machine Learning & Data Science</li>
+            <li data-i18n="cv-skill-4">Machine Learning & Data Science</li>
             <li data-i18n="cv-skill-5">Gestion de projet</li>
             <li data-i18n="cv-skill-6">Autonomie & rigueur</li>
           </ul>
@@ -583,9 +592,10 @@
         <section class="cv-block">
           <h2 data-i18n="cv-profile-title">Profil</h2>
           <p data-i18n="cv-profile-text">
-            Étudiant ingénieur en 4e année à ISIS Castres, spécialisé en Systèmes d&apos;information en santé et
+            Étudiant ingénieur en dernière année (5e année) à ISIS Castres, spécialisé en Systèmes d&apos;information en santé et
             suivant un parcours d&apos;approfondissement en Intelligence Artificielle. Je conçois des solutions
             logicielles et data au service de l&apos;amélioration des parcours de soins et des workflows hospitaliers.
+            À la recherche d&apos;un stage de fin d&apos;études de 22 à 26 semaines, disponible à partir de janvier/février 2027.
           </p>
         </section>
 
@@ -622,21 +632,14 @@
             <li>
               <p class="cv-entry-title" data-i18n="cv-exp1-title">Stage – Systèmes d&apos;information & IAM · CHIC <span class="cv-entry-dates">Avril–Juin 2025 · Castres</span></p>
               <ul class="cv-bullets">
-                <li data-i18n="cv-exp1-b1">Étude et modélisation des workflows IAM pour les agents hospitaliers.</li>
-                <li data-i18n="cv-exp1-b2">Participation au Grand Prix Sprint E-Santé (projet ALPOS).</li>
+                <li data-i18n="cv-exp1-b1">Intégration des comptes jetons dans l&apos;IAM du CHIC ; POC de migration Oracle vers Docker/Kubernetes (VMware ESXi, Ansible).</li>
               </ul>
             </li>
             <li>
-              <p class="cv-entry-title" data-i18n="cv-exp2-title">Stage – Serious game PlaniTime · INU Champollion / ISIS <span class="cv-entry-dates">2026 · Castres</span></p>
+              <p class="cv-entry-title" data-i18n="cv-exp2-title">Stage – Serious game PlaniTime · INU Champollion / ISIS <span class="cv-entry-dates">Juin–Septembre 2026 · Castres</span></p>
               <ul class="cv-bullets">
                 <li data-i18n="cv-exp2-b1">Conception d&apos;un serious game physique/numérique (Arduino, RFID, MQTT) pour la formation en soins infirmiers.</li>
                 <li data-i18n="cv-exp2-b2">Développement backend/frontend (Node.js, Vue 3) et pipeline de contenu narratif.</li>
-              </ul>
-            </li>
-            <li>
-              <p class="cv-entry-title" data-i18n="cv-exp3-title">Stage ouvrier – Granits Michel MAFFRE <span class="cv-entry-dates">Mai 2023</span></p>
-              <ul class="cv-bullets">
-                <li data-i18n="cv-exp3-b1">Manutention, découpe et traitement de matériaux dans le secteur industriel.</li>
               </ul>
             </li>
           </ul>
@@ -646,12 +649,12 @@
           <h2 data-i18n="cv-education-title">Formation</h2>
           <ul class="cv-entry-list">
             <li>
-              <p class="cv-entry-title" data-i18n="cv-education-title-entry">Diplôme d&apos;ingénieur — Informatique & E-santé <span class="cv-entry-dates">2023–2026</span></p>
+              <p class="cv-entry-title" data-i18n="cv-education-title-entry">Diplôme d&apos;ingénieur — Informatique & E-santé <span class="cv-entry-dates">2022–2027</span></p>
               <p data-i18n="cv-education-text">ISIS Castres — parcours d&apos;approfondissement en Intelligence Artificielle.</p>
             </li>
             <li>
               <p class="cv-entry-title" data-i18n="cv-education-mobility-title">Mobilité internationale — Prince of Songkla University (PSU) <span class="cv-entry-dates">Janvier–Mai 2026 · Phuket, Thaïlande</span></p>
-              <p data-i18n="cv-education-mobility-text">Semestre d&apos;échange académique au College of Computing (COC) de la PSU.</p>
+              <p data-i18n="cv-education-mobility-text">Semestre d&apos;échange académique au College of Computing (COC) de la PSU — 19 crédits, dont Cloud Computing, Machine Learning et Computer Security.</p>
             </li>
           </ul>
         </section>

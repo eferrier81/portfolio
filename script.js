@@ -98,7 +98,7 @@ const translationsEn = {
   "nav-print-btn": "Print resume",
 
   "hero-kicker": "Engineering student · Computer Science & E-health",
-  "hero-subtitle": `4th-year engineering student at <strong>ISIS Castres</strong>, in <strong>Computer Science</strong> specializing in <strong>Health Information Systems</strong>, and following an advanced specialization track in <strong>Artificial Intelligence</strong>. I design software and data solutions to improve patient care pathways.`,
+  "hero-subtitle": `Final-year (5th-year) engineering student at <strong>ISIS Castres</strong>, in <strong>Computer Science</strong> specializing in <strong>Health Information Systems</strong>, and following an advanced specialization track in <strong>Artificial Intelligence</strong>. I design software and data solutions to improve patient care pathways.`,
   "hero-btn-projects": "View my projects",
   "hero-btn-contact": "Contact me",
   "hero-avatar-alt": "Portrait of Enzo Ferrier",
@@ -107,7 +107,7 @@ const translationsEn = {
   "marquee-text": "Web Development — Information Systems — E-health — Data Science — Python — Docker — DevOps — Artificial Intelligence —&nbsp;",
 
   "about-title": "Who am I?",
-  "about-p1": `I am a <strong>4th-year engineering student</strong> at ISIS Castres, in <strong>Computer Science</strong>, specializing in <strong>Health Information Systems</strong>. I am also following an advanced specialization track in <strong>Artificial Intelligence</strong>, which I aim to put to use for <strong>improving healthcare</strong>, <strong>hospital workflows</strong>, and the daily work of caregivers.`,
+  "about-p1": `I am a <strong>final-year (5th-year) engineering student</strong> at ISIS Castres, in <strong>Computer Science</strong>, specializing in <strong>Health Information Systems</strong>. I am also following an advanced specialization track in <strong>Artificial Intelligence</strong>, which I aim to put to use for <strong>improving healthcare</strong>, <strong>hospital workflows</strong>, and the daily work of caregivers.`,
   "about-p2": `Through academic projects and professional experience in hospital settings, I am building a dual skill set: <strong>technical</strong> (development, data, Python, e-health architectures) and <strong>business/domain</strong> (IAM, hospital information systems, workstation ergonomics).`,
   "about-li1": "<strong>Specialty:</strong> Computer Science & Health Information Systems",
   "about-li2": "<strong>Specialization track:</strong> Artificial Intelligence",
@@ -164,27 +164,23 @@ const translationsEn = {
   "slide-next-aria": "Next slide",
 
   "experience-title": "Professional experience",
-  "t1-h3": "Manual Labor Internship – Granits Michel MAFFRE",
-  "t1-period": "May 2023",
-  "t1-role": "Material handling & processing",
-  "t1-li1": "Introduction to the industrial sector and stone-working.",
-  "t1-li2": "Handling, cutting, and processing of materials.",
-
   "t2-h3": "Internship – Centre Hospitalier Intercommunal Castres-Mazamet (CHIC)",
-  "t2-period": "April–June 2025 · Castres",
-  "t2-role": "Topic: Information Systems & IAM",
-  "t2-li1": `Studied and modeled <strong>IAM workflows</strong> for hospital staff.`,
-  "t2-li2": `Conducted technical analysis around <strong>Docker</strong> and <strong>Oracle</strong> for tool deployment.`,
-  "t2-li3": `Took part in the <strong>Grand Prix Sprint E-Santé</strong> (ALPOS project).`,
+  "t2-period": "April–June 2025 · Castres (8 weeks)",
+  "t2-role": "Topic: Information Systems, IAM & Infrastructure (DSI)",
+  "t2-li1": `Studied and integrated <strong>token accounts</strong> into CHIC&apos;s <strong>IAM</strong> system, replacing a paper-based process with centralized, secure, and auditable management.`,
+  "t2-li2": `Built a <strong>Proof of Concept</strong> for migrating <strong>Oracle</strong> databases to containerized solutions: imported an Oracle 11g dump into a containerized Oracle XE 11g database under <strong>Docker</strong>, then reproduced it on Oracle 19c.`,
+  "t2-li3": `Deployed a virtualized environment on <strong>VMware ESXi</strong> (Ubuntu Server VM) and set up a single-node <strong>Kubernetes</strong> cluster hosting the containerized Oracle databases.`,
+  "t2-li4": `Developed <strong>Ansible</strong> playbooks to automate VM preparation, Kubernetes installation, and deployment of the containerized Oracle databases.`,
 
   "tmob-h3": "International Exchange – Prince of Songkla University (PSU), Thailand",
   "tmob-period": "January – May 2026 · Phuket, Thailand",
   "tmob-role": "Academic exchange semester · College of Computing (COC)",
   "tmob-li1": `Study-abroad semester at the <strong>College of Computing</strong>, Prince of Songkla University, as part of the Artificial Intelligence specialization track.`,
   "tmob-li2": `Academic and intercultural immersion in Southeast Asia, strengthening international exposure and academic English proficiency.`,
+  "tmob-li3": `Completed a 19-credit course load, including <strong>Cloud Computing and Implementation</strong>, <strong>Introduction to Machine Learning</strong>, <strong>Computer Security</strong>, <strong>Software Deployment and Maintenance</strong>, and <strong>Discrete Mathematics</strong>.`,
 
   "t3-h3": "Internship – INU Champollion / ISIS – CHART Team",
-  "t3-period": "PlaniTime Internship – 2026 · Castres",
+  "t3-period": "PlaniTime Internship – June–September 2026 · Castres",
   "t3-role": "Subject: Hybrid serious game for nursing training",
   "t3-li1": `Designed and developed <strong>PlaniTime</strong>, a physical/digital serious game training nursing students in <strong>shift planning</strong> and prioritizing care tasks.`,
   "t3-li2": `Instrumented physical board (<strong>Arduino</strong>, PN532 RFID readers, WS2812B LED strips) synchronized in real time with an instructor dashboard and a touchscreen kiosk via <strong>MQTT</strong> and <strong>WebSocket</strong>.`,
@@ -195,15 +191,18 @@ const translationsEn = {
   "contact-title": "Let's work together",
   "contact-subtitle": "Interested in an internship, a collaboration around health informatics, or just want to chat? Send me a message.",
   "label-name": "Name",
+  "label-message": "Message",
+  "contact-linkedin-text": "LinkedIn Profile",
   "btn-send": "Send",
   "contact-info-title": "Contact details",
   "label-location": "Location",
-  "contact-note": "I'm open to internship, apprenticeship, or project opportunities in computer science, data, and e-health.",
+  "contact-note": "Currently looking for a final-year internship (22 to 26 weeks), available from January/February 2027. I'm also open to internship, apprenticeship, or project opportunities in computer science, data, and e-health.",
 
   "footer-rights": "All rights reserved.",
   "footer-back-to-top": "Back to top",
 
   "cv-contact-title": "Contact",
+  "location-value": "Castres · open to Toulouse",
   "cv-lang-scale-note": "CEFR levels (A1–C2)",
   "cv-lang-fr-name": "French",
   "cv-lang-en-name": "English",
@@ -211,7 +210,9 @@ const translationsEn = {
   "cv-lang-zh-name": "Chinese",
   "cv-level-native": "C2 · Native language",
   "cv-skill-1": "Python & Web development",
+  "cv-skill-2": "Docker, Kubernetes, CI/CD",
   "cv-skill-3": "Health information systems & IAM",
+  "cv-skill-4": "Machine Learning & Data Science",
   "cv-skill-5": "Project management",
   "cv-skill-6": "Autonomy & rigor",
   "cv-interests-title": "Interests",
@@ -222,7 +223,7 @@ const translationsEn = {
   "cv-portfolio-caption": "Scan to see my full portfolio",
 
   "cv-profile-title": "Profile",
-  "cv-profile-text": `4th-year engineering student at ISIS Castres, specializing in Health Information Systems and following an advanced track in Artificial Intelligence. I design software and data solutions to improve care pathways and hospital workflows.`,
+  "cv-profile-text": `Final-year (5th-year) engineering student at ISIS Castres, specializing in Health Information Systems and following an advanced track in Artificial Intelligence. I design software and data solutions to improve care pathways and hospital workflows. Looking for a final-year internship (22 to 26 weeks), available from January/February 2027.`,
 
   "cv-projects-title": "Projects",
   "cv-project1-desc": `Collaborative web app built during the Nuit de l'Info hackathon, around the theme "Resilient Digital Village": responsive interface and interactive features.`,
@@ -230,21 +231,17 @@ const translationsEn = {
   "cv-project3-desc": `Poor-posture detection for home care workers: Machine Learning models trained on motion data.`,
 
   "cv-exp1-title": `Internship – Information Systems & IAM · CHIC <span class="cv-entry-dates">April–June 2025 · Castres</span>`,
-  "cv-exp1-b1": "Studied and modeled IAM workflows for hospital staff.",
-  "cv-exp1-b2": "Took part in the Grand Prix Sprint E-Santé (ALPOS project).",
+  "cv-exp1-b1": "Integrated token accounts into CHIC's IAM system; ran an Oracle-to-Docker/Kubernetes migration POC (VMware ESXi, Ansible).",
 
-  "cv-exp2-title": `Internship – PlaniTime serious game · INU Champollion / ISIS <span class="cv-entry-dates">2026 · Castres</span>`,
+  "cv-exp2-title": `Internship – PlaniTime serious game · INU Champollion / ISIS <span class="cv-entry-dates">June–September 2026 · Castres</span>`,
   "cv-exp2-b1": "Designed a physical/digital serious game (Arduino, RFID, MQTT) for nursing training.",
   "cv-exp2-b2": "Developed backend/frontend (Node.js, Vue 3) and a narrative content pipeline.",
 
-  "cv-exp3-title": `Manual Labor Internship – Granits Michel MAFFRE <span class="cv-entry-dates">May 2023</span>`,
-  "cv-exp3-b1": "Handling, cutting, and processing of materials in the industrial sector.",
-
   "cv-education-title": "Education",
-  "cv-education-title-entry": `Engineering Degree — Computer Science & E-health <span class="cv-entry-dates">2023–2026</span>`,
+  "cv-education-title-entry": `Engineering Degree — Computer Science & E-health <span class="cv-entry-dates">2022–2027</span>`,
   "cv-education-text": "ISIS Castres — advanced specialization track in Artificial Intelligence.",
   "cv-education-mobility-title": `International Exchange — Prince of Songkla University (PSU) <span class="cv-entry-dates">January–May 2026 · Phuket, Thailand</span>`,
-  "cv-education-mobility-text": "Academic exchange semester at the College of Computing (COC), PSU.",
+  "cv-education-mobility-text": "Academic exchange semester at the College of Computing (COC), PSU — 19 credits, including Cloud Computing, Machine Learning, and Computer Security.",
 };
 
 const i18nOriginals = new Map();
