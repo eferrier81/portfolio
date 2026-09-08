@@ -133,10 +133,10 @@ const translationsEn = {
   "tag-analysis": "Analytical thinking",
 
   "languages-title": "Languages",
-  "langrow-french": `<span>French</span><span class="languages-list__level">Native</span>`,
-  "langrow-english": `<span>English</span><span class="languages-list__level">Good level</span>`,
-  "langrow-spanish": `<span>Spanish</span><span class="languages-list__level">Basic</span>`,
-  "langrow-chinese": `<span>Chinese</span><span class="languages-list__level">Basic</span>`,
+  "langrow-french": `<span>French</span><span class="languages-list__level">Native (C2)</span>`,
+  "langrow-english": `<span>English</span><span class="languages-list__level">Good level (B2)</span>`,
+  "langrow-spanish": `<span>Spanish</span><span class="languages-list__level">Intermediate (B1)</span>`,
+  "langrow-chinese": `<span>Chinese</span><span class="languages-list__level">Basic (A1)</span>`,
 
   "projects-title": "Selected projects",
   "projects-subtitle": "A selection of my academic and personal projects in web development, data, and e-health.",
@@ -176,6 +176,12 @@ const translationsEn = {
   "t2-li1": `Studied and modeled <strong>IAM workflows</strong> for hospital staff.`,
   "t2-li2": `Conducted technical analysis around <strong>Docker</strong> and <strong>Oracle</strong> for tool deployment.`,
   "t2-li3": `Took part in the <strong>Grand Prix Sprint E-Santé</strong> (ALPOS project).`,
+
+  "tmob-h3": "International Exchange – Prince of Songkla University (PSU), Thailand",
+  "tmob-period": "January – May 2026 · Phuket, Thailand",
+  "tmob-role": "Academic exchange semester · College of Computing (COC)",
+  "tmob-li1": `Study-abroad semester at the <strong>College of Computing</strong>, Prince of Songkla University, as part of the Artificial Intelligence specialization track.`,
+  "tmob-li2": `Academic and intercultural immersion in Southeast Asia, strengthening international exposure and academic English proficiency.`,
 
   "t3-h3": "Internship – INU Champollion / ISIS – CHART Team",
   "t3-period": "PlaniTime Internship – 2026 · Castres",
@@ -237,6 +243,8 @@ const translationsEn = {
   "cv-education-title": "Education",
   "cv-education-title-entry": `Engineering Degree — Computer Science & E-health <span class="cv-entry-dates">2023–2026</span>`,
   "cv-education-text": "ISIS Castres — advanced specialization track in Artificial Intelligence.",
+  "cv-education-mobility-title": `International Exchange — Prince of Songkla University (PSU) <span class="cv-entry-dates">January–May 2026 · Phuket, Thailand</span>`,
+  "cv-education-mobility-text": "Academic exchange semester at the College of Computing (COC), PSU.",
 };
 
 const i18nOriginals = new Map();

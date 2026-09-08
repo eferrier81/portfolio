@@ -733,7 +733,7 @@ ul {
 .partner-logos img {
   height: 44px;
   width: auto;
-  max-width: 150px;
+  max-width: 190px;
   object-fit: contain;
   padding: 0.55rem 1rem;
   background: rgba(238, 241, 236, 0.94);
@@ -1465,6 +1465,10 @@ textarea {
 
   .cv-bar__fill--67 {
     width: 67%;
+  }
+
+  .cv-bar__fill--50 {
+    width: 50%;
   }
 
   .cv-bar__fill--17 {
