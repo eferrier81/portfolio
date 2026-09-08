@@ -26,16 +26,20 @@
         <span class="navbar__logo">EF</span>
         <span class="navbar__title">Enzo Ferrier</span>
       </a>
-      <button class="navbar__toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <button class="navbar__toggle" aria-label="Ouvrir le menu" aria-expanded="false" data-i18n="nav-toggle-aria" data-i18n-attr="aria-label">
         <span class="navbar__toggle-line"></span>
         <span class="navbar__toggle-line"></span>
       </button>
       <ul class="navbar__links">
-        <li><a href="#about">À propos</a></li>
-        <li><a href="#skills">Compétences</a></li>
-        <li><a href="#projects">Projets</a></li>
-        <li><a href="#experience">Expériences</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" data-i18n="label-about">À propos</a></li>
+        <li><a href="#skills" data-i18n="label-skills">Compétences</a></li>
+        <li><a href="#projects" data-i18n="label-projects">Projets</a></li>
+        <li><a href="#experience" data-i18n="label-experience">Expériences</a></li>
+        <li><a href="#contact" data-i18n="label-contact">Contact</a></li>
+        <li class="navbar__actions">
+          <button id="lang-toggle-btn" class="navbar__action-btn" type="button" aria-label="Passer en anglais">English</button>
+          <button id="print-cv-btn" class="navbar__action-btn navbar__action-btn--primary" type="button" data-i18n="nav-print-btn">Imprimer le CV</button>
+        </li>
       </ul>
     </nav>
   </header>
@@ -46,7 +50,7 @@
       <div class="hero__bg" aria-hidden="true"></div>
       <div class="hero__content container">
         <div class="hero__top">
-          <p class="hero__kicker" data-scroll>Étudiant ingénieur · Informatique & E-santé</p>
+          <p class="hero__kicker" data-scroll data-i18n="hero-kicker">Étudiant ingénieur · Informatique & E-santé</p>
         </div>
         <div class="hero__headline" data-scroll>
           <h1 id="hero-title" class="hero__name">
@@ -56,25 +60,25 @@
         </div>
         <div class="hero__bottom">
           <div class="hero__info" data-scroll>
-            <p class="hero__subtitle">
+            <p class="hero__subtitle" data-i18n="hero-subtitle">
               Étudiant en 4e année à <strong>ISIS Castres</strong>, en <strong>informatique</strong> spécialisé en
               <strong>Systèmes d'information en santé</strong>, et suivant un parcours d'approfondissement en
               <strong>Intelligence Artificielle</strong>.
               Je conçois des solutions logicielles et data pour améliorer les parcours de soins.
             </p>
             <div class="hero__actions">
-              <a href="#projects" class="btn btn--primary">Voir mes projets</a>
-              <a href="#contact" class="btn btn--ghost">Me contacter</a>
+              <a href="#projects" class="btn btn--primary" data-i18n="hero-btn-projects">Voir mes projets</a>
+              <a href="#contact" class="btn btn--ghost" data-i18n="hero-btn-contact">Me contacter</a>
             </div>
           </div>
           <div class="hero__visual" data-scroll>
             <div class="hero__avatar">
-              <img src="assets/images/portrait.jpg" alt="Portrait d'Enzo Ferrier" />
+              <img src="assets/images/portrait.jpg" alt="Portrait d'Enzo Ferrier" data-i18n-attr="alt" data-i18n="hero-avatar-alt" />
             </div>
             <ul class="hero__meta" aria-label="Informations principales">
-              <li>Castres, Occitanie</li>
+              <li data-i18n="hero-meta-location">Castres, Occitanie</li>
               <li>ISIS Castres · 2023–2026</li>
-              <li>Informatique & E-santé</li>
+              <li data-i18n="hero-meta-field">Informatique & E-santé</li>
             </ul>
           </div>
         </div>
@@ -82,8 +86,8 @@
       <!-- Marquee -->
       <div class="marquee" aria-hidden="true">
         <div class="marquee__track">
-          <span class="marquee__content">Développement Web — Systèmes d'Information — E-Santé — Data Science — Python — Docker — DevOps — Intelligence Artificielle —&nbsp;</span>
-          <span class="marquee__content">Développement Web — Systèmes d'Information — E-Santé — Data Science — Python — Docker — DevOps — Intelligence Artificielle —&nbsp;</span>
+          <span class="marquee__content" data-i18n="marquee-text">Développement Web — Systèmes d'Information — E-Santé — Data Science — Python — Docker — DevOps — Intelligence Artificielle —&nbsp;</span>
+          <span class="marquee__content" data-i18n="marquee-text">Développement Web — Systèmes d'Information — E-Santé — Data Science — Python — Docker — DevOps — Intelligence Artificielle —&nbsp;</span>
         </div>
       </div>
     </section>
@@ -92,19 +96,19 @@
     <section id="about" class="section section--alt" aria-labelledby="about-title">
       <div class="container section__inner">
         <header class="section__header">
-          <p class="section__kicker">À propos</p>
-          <h2 id="about-title">Qui suis-je&nbsp;?</h2>
+          <p class="section__kicker" data-i18n="label-about">À propos</p>
+          <h2 id="about-title" data-i18n="about-title">Qui suis-je&nbsp;?</h2>
         </header>
         <div class="grid grid--2-cols">
           <div>
-            <p>
+            <p data-i18n="about-p1">
               Je suis <strong>étudiant ingénieur en 4e année</strong> à ISIS Castres, en
               <strong>informatique</strong>, spécialisé en <strong>Systèmes d&apos;information en santé</strong>.
               Je suis par ailleurs un parcours d&apos;approfondissement en <strong>Intelligence Artificielle</strong>,
               que je cherche à mettre au service de <strong>l&apos;amélioration de la santé</strong>,
               des <strong>workflows hospitaliers</strong> et du quotidien des soignants.
             </p>
-            <p>
+            <p data-i18n="about-p2">
               Au travers de projets académiques et d&apos;expériences professionnelles en milieu hospitalier, je
               développe une double compétence <strong>technique</strong> (développement, data, Python, architectures
               e-santé) et <strong>métier</strong> (IAM, SI hospitaliers, ergonomie des postes de travail).
@@ -117,11 +121,11 @@
           </div>
           <div>
             <ul class="about-list">
-              <li><strong>Spécialité :</strong> Informatique & Systèmes d&apos;information en santé</li>
-              <li><strong>Parcours d&apos;approfondissement :</strong> Intelligence Artificielle</li>
-              <li><strong>Domaine :</strong> Systèmes d&apos;information hospitaliers & e-santé</li>
-              <li><strong>Qualités :</strong> Autonomie, rigueur, esprit d&apos;équipe en contexte hospitalier</li>
-              <li><strong>Centres d&apos;intérêt :</strong> Tennis, jeux vidéo, innovation en santé</li>
+              <li data-i18n="about-li1"><strong>Spécialité :</strong> Informatique & Systèmes d&apos;information en santé</li>
+              <li data-i18n="about-li2"><strong>Parcours d&apos;approfondissement :</strong> Intelligence Artificielle</li>
+              <li data-i18n="about-li3"><strong>Domaine :</strong> Systèmes d&apos;information hospitaliers & e-santé</li>
+              <li data-i18n="about-li4"><strong>Qualités :</strong> Autonomie, rigueur, esprit d&apos;équipe en contexte hospitalier</li>
+              <li data-i18n="about-li5"><strong>Centres d&apos;intérêt :</strong> Tennis, jeux vidéo, innovation en santé</li>
             </ul>
           </div>
         </div>
@@ -132,14 +136,14 @@
     <section id="skills" class="section" aria-labelledby="skills-title">
       <div class="container section__inner">
         <header class="section__header">
-          <p class="section__kicker">Compétences</p>
-          <h2 id="skills-title">Ce que je sais faire</h2>
+          <p class="section__kicker" data-i18n="label-skills">Compétences</p>
+          <h2 id="skills-title" data-i18n="skills-title">Ce que je sais faire</h2>
         </header>
 
         <div class="skills-grid">
           <article class="card skill-card" data-scroll data-scroll-delay="0">
-            <h3>Développement & DevOps</h3>
-            <p>Développement d&apos;applications et déploiement de solutions techniques.</p>
+            <h3 data-i18n="skill1-h3">Développement & DevOps</h3>
+            <p data-i18n="skill1-p">Développement d&apos;applications et déploiement de solutions techniques.</p>
             <ul class="tag-list" aria-label="Compétences développement">
               <li>Python</li>
               <li>SQL</li>
@@ -149,46 +153,46 @@
           </article>
 
           <article class="card skill-card" data-scroll data-scroll-delay="1">
-            <h3>Systèmes d&apos;information en santé</h3>
-            <p>Compréhension des architectures SI hospitalières et des workflows métier.</p>
+            <h3 data-i18n="skill2-h3">Systèmes d&apos;information en santé</h3>
+            <p data-i18n="skill2-p">Compréhension des architectures SI hospitalières et des workflows métier.</p>
             <ul class="tag-list" aria-label="Compétences SI santé">
               <li>IAM</li>
-              <li>Workflows hospitaliers</li>
-              <li>Interopérabilité</li>
-              <li>E-santé</li>
+              <li data-i18n="tag-hospital-workflows">Workflows hospitaliers</li>
+              <li data-i18n="tag-interop">Interopérabilité</li>
+              <li data-i18n="tag-ehealth">E-santé</li>
             </ul>
           </article>
 
           <article class="card skill-card" data-scroll data-scroll-delay="2">
-            <h3>Data Science & IA <span class="skill-card__note">(parcours de spécialisation)</span></h3>
-            <p>Approfondissement de modèles de Machine Learning appliqués à la santé.</p>
+            <h3 data-i18n="skill3-h3">Data Science & IA <span class="skill-card__note">(parcours de spécialisation)</span></h3>
+            <p data-i18n="skill3-p">Approfondissement de modèles de Machine Learning appliqués à la santé.</p>
             <ul class="tag-list" aria-label="Technologies IA & Data">
               <li>Python</li>
               <li>Scikit-learn</li>
-              <li>Analyse prédictive</li>
-              <li>Traitement de données santé</li>
+              <li data-i18n="tag-predictive">Analyse prédictive</li>
+              <li data-i18n="tag-health-data">Traitement de données santé</li>
             </ul>
           </article>
 
           <article class="card skill-card" data-scroll data-scroll-delay="3">
-            <h3>Gestion de projet & Soft skills</h3>
-            <p>Travail en équipe pluridisciplinaire et coordination en environnement hospitalier.</p>
+            <h3 data-i18n="skill4-h3">Gestion de projet & Soft skills</h3>
+            <p data-i18n="skill4-p">Travail en équipe pluridisciplinaire et coordination en environnement hospitalier.</p>
             <ul class="tag-list" aria-label="Compétences non techniques">
               <li>Coordination</li>
-              <li>Autonomie</li>
+              <li data-i18n="tag-autonomy">Autonomie</li>
               <li>Communication</li>
-              <li>Esprit d&apos;analyse</li>
+              <li data-i18n="tag-analysis">Esprit d&apos;analyse</li>
             </ul>
           </article>
         </div>
 
         <div class="languages">
-          <h3>Langues</h3>
+          <h3 data-i18n="languages-title">Langues</h3>
           <ul class="languages-list" aria-label="Compétences linguistiques">
-            <li><span>Français</span><span class="languages-list__level">Natif</span></li>
-            <li><span>Anglais</span><span class="languages-list__level">Bon niveau</span></li>
-            <li><span>Espagnol</span><span class="languages-list__level">Notions</span></li>
-            <li><span>Chinois</span><span class="languages-list__level">Notions</span></li>
+            <li data-i18n="langrow-french"><span>Français</span><span class="languages-list__level">Natif</span></li>
+            <li data-i18n="langrow-english"><span>Anglais</span><span class="languages-list__level">Bon niveau</span></li>
+            <li data-i18n="langrow-spanish"><span>Espagnol</span><span class="languages-list__level">Notions</span></li>
+            <li data-i18n="langrow-chinese"><span>Chinois</span><span class="languages-list__level">Notions</span></li>
           </ul>
         </div>
       </div>
@@ -198,24 +202,24 @@
     <section id="projects" class="section section--alt" aria-labelledby="projects-title">
       <div class="container section__inner">
         <header class="section__header">
-          <p class="section__kicker">Projets</p>
-          <h2 id="projects-title">Sélection de projets</h2>
-          <p class="section__subtitle">Une partie de mes projets académiques et personnels autour du développement web, de la data et de l&apos;e-santé.</p>
+          <p class="section__kicker" data-i18n="label-projects">Projets</p>
+          <h2 id="projects-title" data-i18n="projects-title">Sélection de projets</h2>
+          <p class="section__subtitle" data-i18n="projects-subtitle">Une partie de mes projets académiques et personnels autour du développement web, de la data et de l&apos;e-santé.</p>
         </header>
 
         <div class="projects-grid">
           <!-- Projet 1 : Nuit de l'Info -->
           <article class="card project-card" data-scroll>
             <div class="project-card__header">
-              <h3>Nuit de l&apos;Info 2024-2025 – Village Numérique Résistant</h3>
-              <p class="project-card__role">Rôle : Développeur principal</p>
+              <h3 data-i18n="p1-title">Nuit de l&apos;Info 2024-2025 – Village Numérique Résistant</h3>
+              <p class="project-card__role" data-i18n="p1-role">Rôle : Développeur principal</p>
             </div>
-            <p>
+            <p data-i18n="p1-p1">
               Participation à la <strong>Nuit de l&apos;Info</strong> avec la réalisation d&apos;une application web autour du thème
               &laquo;&nbsp;Village Numérique Résistant&nbsp;&raquo;. Conception de l&apos;interface, intégration responsive et mise en place de fonctionnalités
               interactives.
             </p>
-            <p>
+            <p data-i18n="p1-p2">
               Le projet met en avant la <strong>résilience numérique</strong> d&apos;un village connecté, avec un souci d&apos;ergonomie et
               d&apos;accessibilité.
             </p>
@@ -225,25 +229,25 @@
               <li>JavaScript</li>
             </ul>
             <div class="project-card__actions">
-              <a class="btn btn--link" href="https://nuitdelinfo.alexisdechenais.fr/" target="_blank" rel="noopener noreferrer">Voir la démo</a>
-              <a class="btn btn--ghost" href="https://github.com/eferrier81/Nuit-de-l-info-2025" target="_blank" rel="noopener noreferrer">Voir le code (GitHub)</a>
+              <a class="btn btn--link" href="https://nuitdelinfo.alexisdechenais.fr/" target="_blank" rel="noopener noreferrer" data-i18n="btn-view-demo">Voir la démo</a>
+              <a class="btn btn--ghost" href="https://github.com/eferrier81/Nuit-de-l-info-2025" target="_blank" rel="noopener noreferrer" data-i18n="btn-view-code">Voir le code (GitHub)</a>
             </div>
           </article>
 
           <!-- Projet : The Hospital -->
           <article class="card project-card" data-scroll>
             <div class="project-card__header">
-              <h3>The Hospital – Valorisation des productions vidéo ISIS</h3>
-              <p class="project-card__role">Rôle : Développeur Full-Stack (projet tutoré en équipe de 3)</p>
+              <h3 data-i18n="p2-title">The Hospital – Valorisation des productions vidéo ISIS</h3>
+              <p class="project-card__role" data-i18n="p2-role">Rôle : Développeur Full-Stack (projet tutoré en équipe de 3)</p>
             </div>
-            <p>
+            <p data-i18n="p2-p1">
               Conception et développement d&apos;une <strong>application web</strong> pour recenser et valoriser les films
               réalisés par les étudiants d&apos;ISIS Castres dans le cadre de leurs cours d&apos;anglais (projet &laquo;&nbsp;The
               Hospital&nbsp;&raquo;). Le site propose une interface publique de consultation des films (métadonnées,
               participants, anecdotes, commentaires) ainsi qu&apos;un <strong>espace administrateur sécurisé</strong> pour
               gérer les contenus.
             </p>
-            <p>
+            <p data-i18n="p2-p2">
               Du cahier des charges à la mise en production&nbsp;: analyse du besoin, maquettage Figma, modélisation de
               la base de données, développement d&apos;une <strong>API REST</strong> documentée, puis déploiement
               conteneurisé avec <strong>CI/CD GitLab</strong> et orchestration <strong>Kubernetes</strong>.
@@ -258,7 +262,7 @@
               <li>CI/CD</li>
             </ul>
             <div class="project-card__actions">
-              <a class="btn btn--link" href="https://thehospital.chl.connected-health.fr/" target="_blank" rel="noopener noreferrer">Voir la démo</a>
+              <a class="btn btn--link" href="https://thehospital.chl.connected-health.fr/" target="_blank" rel="noopener noreferrer" data-i18n="btn-view-demo">Voir la démo</a>
             </div>
           </article>
 
@@ -267,7 +271,7 @@
             <div class="project-card__header project-card__header--with-logo">
               <div>
                 <h3>ALPOS – Grand Prix Sprint E-Santé</h3>
-                <p class="project-card__role">Rôle : Développeur IA</p>
+                <p class="project-card__role" data-i18n="p3-role">Rôle : Développeur IA</p>
               </div>
               <!-- Remplacez le placeholder par le vrai logo dans assets/projects/alpos-logo.png -->
               <div class="project-card__logo">
@@ -278,22 +282,22 @@
             <div class="slideshow" aria-label="Diaporama de présentation du projet ALPOS">
               <div class="slideshow__slides" id="alpos-slides">
                 <div class="slideshow__slide slideshow__slide--active">
-                  <h4>Contexte</h4>
-                  <p>
+                  <h4 data-i18n="slide1-h4">Contexte</h4>
+                  <p data-i18n="slide1-p">
                     ALPOS est un projet de <strong>reconnaissance de mauvaises postures</strong> pour les aides à domicile,
                     afin de prévenir les troubles musculo-squelettiques et améliorer l&apos;ergonomie au travail.
                   </p>
                 </div>
                 <div class="slideshow__slide">
-                  <h4>Approche IA</h4>
-                  <p>
+                  <h4 data-i18n="slide2-h4">Approche IA</h4>
+                  <p data-i18n="slide2-p">
                     Conception et entraînement de modèles de <strong>Machine Learning</strong> à partir de données de
                     mouvements, expérimentation de plusieurs algorithmes et construction d&apos;un pipeline de traitement.
                   </p>
                 </div>
                 <div class="slideshow__slide">
-                  <h4>Impact & e-santé</h4>
-                  <p>
+                  <h4 data-i18n="slide3-h4">Impact & e-santé</h4>
+                  <p data-i18n="slide3-p">
                     Contribution à l&apos;innovation en <strong>e-santé</strong> en proposant un outil d&apos;analyse ergonomique
                     au service des soignants et des structures d&apos;aide à domicile, avec une réflexion sur
                     l&apos;<strong>éthique de l&apos;IA</strong> en santé.
@@ -302,11 +306,11 @@
               </div>
 
               <div class="slideshow__controls">
-                <button class="slideshow__btn" type="button" data-slideshow-prev="alpos" aria-label="Slide précédente">
+                <button class="slideshow__btn" type="button" data-slideshow-prev="alpos" aria-label="Slide précédente" data-i18n="slide-prev-aria" data-i18n-attr="aria-label">
                   ◀
                 </button>
                 <div class="slideshow__dots" id="alpos-dots" aria-label="Navigation dans le diaporama"></div>
-                <button class="slideshow__btn" type="button" data-slideshow-next="alpos" aria-label="Slide suivante">
+                <button class="slideshow__btn" type="button" data-slideshow-next="alpos" aria-label="Slide suivante" data-i18n="slide-next-aria" data-i18n-attr="aria-label">
                   ▶
                 </button>
               </div>
@@ -326,20 +330,20 @@
     <section id="experience" class="section" aria-labelledby="experience-title">
       <div class="container section__inner">
         <header class="section__header">
-          <p class="section__kicker">Expériences</p>
-          <h2 id="experience-title">Parcours professionnel</h2>
+          <p class="section__kicker" data-i18n="label-experience">Expériences</p>
+          <h2 id="experience-title" data-i18n="experience-title">Parcours professionnel</h2>
         </header>
 
         <ol class="timeline" aria-label="Chronologie des expériences professionnelles">
           <li class="timeline__item" data-scroll>
             <div class="timeline__marker" aria-hidden="true"></div>
             <div class="timeline__content card">
-              <h3>Stage ouvrier – Granits Michel MAFFRE</h3>
-              <p class="timeline__period">Mai 2023</p>
-              <p class="timeline__role">Manutention & traitement de matériaux</p>
+              <h3 data-i18n="t1-h3">Stage ouvrier – Granits Michel MAFFRE</h3>
+              <p class="timeline__period" data-i18n="t1-period">Mai 2023</p>
+              <p class="timeline__role" data-i18n="t1-role">Manutention & traitement de matériaux</p>
               <ul>
-                <li>Découverte du secteur industriel et du travail de la pierre.</li>
-                <li>Manutention, découpe et traitement de matériaux.</li>
+                <li data-i18n="t1-li1">Découverte du secteur industriel et du travail de la pierre.</li>
+                <li data-i18n="t1-li2">Manutention, découpe et traitement de matériaux.</li>
               </ul>
             </div>
           </li>
@@ -347,13 +351,13 @@
           <li class="timeline__item" data-scroll>
             <div class="timeline__marker" aria-hidden="true"></div>
             <div class="timeline__content card">
-              <h3>Stage – Centre Hospitalier Intercommunal Castres-Mazamet (CHIC)</h3>
-              <p class="timeline__period">Avril – Juin 2025 · Castres</p>
-              <p class="timeline__role">Thématique : Systèmes d&apos;information & IAM</p>
+              <h3 data-i18n="t2-h3">Stage – Centre Hospitalier Intercommunal Castres-Mazamet (CHIC)</h3>
+              <p class="timeline__period" data-i18n="t2-period">Avril – Juin 2025 · Castres</p>
+              <p class="timeline__role" data-i18n="t2-role">Thématique : Systèmes d&apos;information & IAM</p>
               <ul>
-                <li>Étude et modélisation des <strong>workflows IAM</strong> pour les agents hospitaliers.</li>
-                <li>Analyse technique autour de <strong>Docker</strong> et <strong>Oracle</strong> pour le déploiement d&apos;outils.</li>
-                <li>Participation au <strong>Grand Prix Sprint E-Santé</strong> (projet ALPOS).</li>
+                <li data-i18n="t2-li1">Étude et modélisation des <strong>workflows IAM</strong> pour les agents hospitaliers.</li>
+                <li data-i18n="t2-li2">Analyse technique autour de <strong>Docker</strong> et <strong>Oracle</strong> pour le déploiement d&apos;outils.</li>
+                <li data-i18n="t2-li3">Participation au <strong>Grand Prix Sprint E-Santé</strong> (projet ALPOS).</li>
               </ul>
             </div>
           </li>
@@ -361,23 +365,23 @@
           <li class="timeline__item" data-scroll>
             <div class="timeline__marker" aria-hidden="true"></div>
             <div class="timeline__content card">
-              <h3>Stage – INU Champollion / ISIS – Équipe CHART</h3>
-              <p class="timeline__period">Stage PlaniTime – 2026 · Castres</p>
-              <p class="timeline__role">Sujet : Serious game hybride pour la formation en soins infirmiers</p>
+              <h3 data-i18n="t3-h3">Stage – INU Champollion / ISIS – Équipe CHART</h3>
+              <p class="timeline__period" data-i18n="t3-period">Stage PlaniTime – 2026 · Castres</p>
+              <p class="timeline__role" data-i18n="t3-role">Sujet : Serious game hybride pour la formation en soins infirmiers</p>
               <ul>
-                <li>Conception et développement de <strong>PlaniTime</strong>, un serious game physique/numérique formant les
+                <li data-i18n="t3-li1">Conception et développement de <strong>PlaniTime</strong>, un serious game physique/numérique formant les
                   étudiants en soins infirmiers à la <strong>planification</strong> et à la priorisation des tâches de soin
                   sur une garde.</li>
-                <li>Plateau physique instrumenté (<strong>Arduino</strong>, lecteurs RFID PN532, bandeaux LED WS2812B)
+                <li data-i18n="t3-li2">Plateau physique instrumenté (<strong>Arduino</strong>, lecteurs RFID PN532, bandeaux LED WS2812B)
                   synchronisé en temps réel avec un tableau de bord formateur et un écran kiosque tactile via
                   <strong>MQTT</strong> et <strong>WebSocket</strong>.</li>
-                <li>Développement du backend (<strong>Node.js/Express</strong>, <strong>MariaDB</strong>) et du frontend
+                <li data-i18n="t3-li3">Développement du backend (<strong>Node.js/Express</strong>, <strong>MariaDB</strong>) et du frontend
                   (<strong>Vue 3</strong>/Vite)&nbsp;: machine à états reconstruisant les événements de pose/retrait des
                   pions, calcul en direct de la charge de travail par rôle (IDE/AS) et par créneau.</li>
-                <li>Mise en place d&apos;un pipeline de contenu reliant un outil de scénarisation narrative
+                <li data-i18n="t3-li4">Mise en place d&apos;un pipeline de contenu reliant un outil de scénarisation narrative
                   (<strong>Articy:draft</strong>) à un convertisseur XML maison, jusqu&apos;à la fabrication physique des
                   pions.</li>
-                <li>Fiabilisation matérielle (diagnostic des lecteurs NFC) et scénario de test de bout en bout simulant
+                <li data-i18n="t3-li5">Fiabilisation matérielle (diagnostic des lecteurs NFC) et scénario de test de bout en bout simulant
                   les événements RFID par HTTP, sans plateau physique connecté.</li>
               </ul>
               <ul class="tag-list" aria-label="Technologies utilisées pour PlaniTime">
@@ -401,9 +405,9 @@
     <section id="contact" class="section section--alt" aria-labelledby="contact-title">
       <div class="container section__inner contact">
         <header class="section__header">
-          <p class="section__kicker">Contact</p>
-          <h2 id="contact-title">Travaillons ensemble</h2>
-          <p class="section__subtitle">
+          <p class="section__kicker" data-i18n="label-contact">Contact</p>
+          <h2 id="contact-title" data-i18n="contact-title">Travaillons ensemble</h2>
+          <p class="section__subtitle" data-i18n="contact-subtitle">
             Intéressé(e) par un stage, une collaboration autour de l&apos;informatique en santé ou simplement envie d&apos;échanger&nbsp;?
             Laisse-moi un message.
           </p>
@@ -412,7 +416,7 @@
         <div class="grid grid--2-cols contact__grid">
           <form class="contact-form" id="contact-form" aria-label="Formulaire de contact">
             <div class="form-group">
-              <label for="name">Nom</label>
+              <label for="name" data-i18n="label-name">Nom</label>
               <input id="name" name="name" type="text" required autocomplete="name" />
             </div>
 
@@ -422,16 +426,16 @@
             </div>
 
             <div class="form-group">
-              <label for="message">Message</label>
+              <label for="message" data-i18n="label-message">Message</label>
               <textarea id="message" name="message" rows="5" required></textarea>
             </div>
 
-            <button type="submit" class="btn btn--primary">Envoyer</button>
+            <button type="submit" class="btn btn--primary" data-i18n="btn-send">Envoyer</button>
             <p class="form-status" id="form-status" aria-live="polite"></p>
           </form>
 
           <div class="contact-info">
-            <h3>Coordonnées</h3>
+            <h3 data-i18n="contact-info-title">Coordonnées</h3>
             <ul class="contact-info__list">
               <li>
                 <span class="contact-info__label">Email</span>
@@ -446,11 +450,11 @@
                 <a href="https://www.linkedin.com/in/enzo-ferrier-b2844a253/" target="_blank" rel="noopener noreferrer">Profil LinkedIn</a>
               </li>
               <li>
-                <span class="contact-info__label">Localisation</span>
+                <span class="contact-info__label" data-i18n="label-location">Localisation</span>
                 <span>Castres, Occitanie, France</span>
               </li>
             </ul>
-            <p class="contact-info__note">
+            <p class="contact-info__note" data-i18n="contact-note">
               Je suis ouvert aux opportunités de stage, alternance ou projets autour de l&apos;informatique, de la data et de
               l&apos;e-santé.
             </p>
@@ -463,10 +467,175 @@
   <!-- Pied de page -->
   <footer class="site-footer">
     <div class="container site-footer__inner">
-      <p>© <span id="year"></span> Enzo Ferrier · Tous droits réservés.</p>
-      <a href="#top" class="back-to-top">Retour en haut</a>
+      <p>© <span id="year"></span> Enzo Ferrier · <span data-i18n="footer-rights">Tous droits réservés.</span></p>
+      <a href="#top" class="back-to-top" data-i18n="footer-back-to-top">Retour en haut</a>
     </div>
   </footer>
+
+  <!-- CV imprimable : visible uniquement à l'impression / export PDF (bouton "Imprimer le CV") -->
+  <div class="print-cv">
+    <header class="cv-header">
+      <div class="cv-header__photo">
+        <img src="assets/images/portrait.jpg" alt="" />
+      </div>
+      <div class="cv-header__identity">
+        <h1>Enzo Ferrier</h1>
+        <p data-i18n="hero-kicker">Étudiant ingénieur · Informatique & E-santé</p>
+      </div>
+    </header>
+
+    <div class="cv-body">
+      <aside class="cv-sidebar">
+        <section class="cv-block">
+          <h2 data-i18n="cv-contact-title">Contact</h2>
+          <ul class="cv-contact-list">
+            <li>
+              <span class="cv-contact-list__label">Email</span>
+              <a href="mailto:enzoferrier81120@gmail.com">enzoferrier81120@gmail.com</a>
+            </li>
+            <li>
+              <span class="cv-contact-list__label" data-i18n="label-location">Localisation</span>
+              <span>Castres, Occitanie, France</span>
+            </li>
+            <li>
+              <span class="cv-contact-list__label">GitHub</span>
+              <span>@eferrier81</span>
+            </li>
+            <li>
+              <span class="cv-contact-list__label">LinkedIn</span>
+              <span>enzo-ferrier</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="cv-block">
+          <h2 data-i18n="languages-title">Langues</h2>
+          <p class="cv-lang-scale" data-i18n="cv-lang-scale-note">Niveaux CECRL (A1–C2)</p>
+          <ul class="cv-lang-list">
+            <li>
+              <div class="cv-lang-row"><span data-i18n="cv-lang-fr-name">Français</span><span data-i18n="cv-level-native">C2 · Langue maternelle</span></div>
+              <div class="cv-bar"><span class="cv-bar__fill cv-bar__fill--100"></span></div>
+            </li>
+            <li>
+              <div class="cv-lang-row"><span data-i18n="cv-lang-en-name">Anglais</span><span>B2</span></div>
+              <div class="cv-bar"><span class="cv-bar__fill cv-bar__fill--67"></span></div>
+            </li>
+            <li>
+              <div class="cv-lang-row"><span data-i18n="cv-lang-es-name">Espagnol</span><span>A1</span></div>
+              <div class="cv-bar"><span class="cv-bar__fill cv-bar__fill--17"></span></div>
+            </li>
+            <li>
+              <div class="cv-lang-row"><span data-i18n="cv-lang-zh-name">Chinois</span><span>A1</span></div>
+              <div class="cv-bar"><span class="cv-bar__fill cv-bar__fill--17"></span></div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="cv-block">
+          <h2 data-i18n="label-skills">Compétences</h2>
+          <ul class="cv-simple-list">
+            <li data-i18n="cv-skill-1">Développement Python & Web</li>
+            <li>SQL, Docker, CI/CD</li>
+            <li data-i18n="cv-skill-3">Systèmes d&apos;information santé & IAM</li>
+            <li>Machine Learning & Data Science</li>
+            <li data-i18n="cv-skill-5">Gestion de projet</li>
+            <li data-i18n="cv-skill-6">Autonomie & rigueur</li>
+          </ul>
+        </section>
+
+        <section class="cv-block">
+          <h2 data-i18n="cv-interests-title">Centres d&apos;intérêt</h2>
+          <ul class="cv-simple-list">
+            <li>Tennis</li>
+            <li data-i18n="cv-interest-2">Jeux vidéo</li>
+            <li data-i18n="cv-interest-3">Innovation en santé</li>
+          </ul>
+        </section>
+
+        <section class="cv-block cv-block--qr">
+          <h2 data-i18n="cv-portfolio-title">Portfolio en ligne</h2>
+          <div class="cv-qr">
+            <svg class="cv-qr__code" viewBox="0 0 37 37" shape-rendering="crispEdges" role="img" aria-label="QR code vers le portfolio en ligne d'Enzo Ferrier">
+              <rect width="37" height="37" fill="#ffffff"></rect>
+              <g transform="translate(4,4)"><path d="M0,0h1v1h-1zM1,0h1v1h-1zM2,0h1v1h-1zM3,0h1v1h-1zM4,0h1v1h-1zM5,0h1v1h-1zM6,0h1v1h-1zM8,0h1v1h-1zM9,0h1v1h-1zM10,0h1v1h-1zM11,0h1v1h-1zM14,0h1v1h-1zM15,0h1v1h-1zM16,0h1v1h-1zM17,0h1v1h-1zM18,0h1v1h-1zM22,0h1v1h-1zM23,0h1v1h-1zM24,0h1v1h-1zM25,0h1v1h-1zM26,0h1v1h-1zM27,0h1v1h-1zM28,0h1v1h-1zM0,1h1v1h-1zM6,1h1v1h-1zM10,1h1v1h-1zM11,1h1v1h-1zM12,1h1v1h-1zM13,1h1v1h-1zM14,1h1v1h-1zM18,1h1v1h-1zM19,1h1v1h-1zM20,1h1v1h-1zM22,1h1v1h-1zM28,1h1v1h-1zM0,2h1v1h-1zM2,2h1v1h-1zM3,2h1v1h-1zM4,2h1v1h-1zM6,2h1v1h-1zM9,2h1v1h-1zM11,2h1v1h-1zM12,2h1v1h-1zM14,2h1v1h-1zM15,2h1v1h-1zM17,2h1v1h-1zM20,2h1v1h-1zM22,2h1v1h-1zM24,2h1v1h-1zM25,2h1v1h-1zM26,2h1v1h-1zM28,2h1v1h-1zM0,3h1v1h-1zM2,3h1v1h-1zM3,3h1v1h-1zM4,3h1v1h-1zM6,3h1v1h-1zM8,3h1v1h-1zM9,3h1v1h-1zM12,3h1v1h-1zM13,3h1v1h-1zM14,3h1v1h-1zM16,3h1v1h-1zM18,3h1v1h-1zM20,3h1v1h-1zM22,3h1v1h-1zM24,3h1v1h-1zM25,3h1v1h-1zM26,3h1v1h-1zM28,3h1v1h-1zM0,4h1v1h-1zM2,4h1v1h-1zM3,4h1v1h-1zM4,4h1v1h-1zM6,4h1v1h-1zM8,4h1v1h-1zM10,4h1v1h-1zM14,4h1v1h-1zM15,4h1v1h-1zM16,4h1v1h-1zM22,4h1v1h-1zM24,4h1v1h-1zM25,4h1v1h-1zM26,4h1v1h-1zM28,4h1v1h-1zM0,5h1v1h-1zM6,5h1v1h-1zM8,5h1v1h-1zM16,5h1v1h-1zM19,5h1v1h-1zM22,5h1v1h-1zM28,5h1v1h-1zM0,6h1v1h-1zM1,6h1v1h-1zM2,6h1v1h-1zM3,6h1v1h-1zM4,6h1v1h-1zM5,6h1v1h-1zM6,6h1v1h-1zM8,6h1v1h-1zM10,6h1v1h-1zM12,6h1v1h-1zM14,6h1v1h-1zM16,6h1v1h-1zM18,6h1v1h-1zM20,6h1v1h-1zM22,6h1v1h-1zM23,6h1v1h-1zM24,6h1v1h-1zM25,6h1v1h-1zM26,6h1v1h-1zM27,6h1v1h-1zM28,6h1v1h-1zM8,7h1v1h-1zM12,7h1v1h-1zM14,7h1v1h-1zM17,7h1v1h-1zM18,7h1v1h-1zM0,8h1v1h-1zM4,8h1v1h-1zM6,8h1v1h-1zM7,8h1v1h-1zM8,8h1v1h-1zM10,8h1v1h-1zM11,8h1v1h-1zM14,8h1v1h-1zM15,8h1v1h-1zM17,8h1v1h-1zM20,8h1v1h-1zM21,8h1v1h-1zM22,8h1v1h-1zM23,8h1v1h-1zM24,8h1v1h-1zM25,8h1v1h-1zM28,8h1v1h-1zM0,9h1v1h-1zM1,9h1v1h-1zM2,9h1v1h-1zM4,9h1v1h-1zM7,9h1v1h-1zM10,9h1v1h-1zM11,9h1v1h-1zM14,9h1v1h-1zM15,9h1v1h-1zM16,9h1v1h-1zM18,9h1v1h-1zM21,9h1v1h-1zM22,9h1v1h-1zM23,9h1v1h-1zM24,9h1v1h-1zM25,9h1v1h-1zM26,9h1v1h-1zM27,9h1v1h-1zM28,9h1v1h-1zM0,10h1v1h-1zM2,10h1v1h-1zM3,10h1v1h-1zM6,10h1v1h-1zM9,10h1v1h-1zM12,10h1v1h-1zM13,10h1v1h-1zM14,10h1v1h-1zM15,10h1v1h-1zM16,10h1v1h-1zM20,10h1v1h-1zM21,10h1v1h-1zM22,10h1v1h-1zM23,10h1v1h-1zM24,10h1v1h-1zM28,10h1v1h-1zM5,11h1v1h-1zM7,11h1v1h-1zM9,11h1v1h-1zM11,11h1v1h-1zM14,11h1v1h-1zM17,11h1v1h-1zM19,11h1v1h-1zM20,11h1v1h-1zM21,11h1v1h-1zM23,11h1v1h-1zM25,11h1v1h-1zM27,11h1v1h-1zM28,11h1v1h-1zM0,12h1v1h-1zM1,12h1v1h-1zM2,12h1v1h-1zM4,12h1v1h-1zM5,12h1v1h-1zM6,12h1v1h-1zM7,12h1v1h-1zM10,12h1v1h-1zM12,12h1v1h-1zM13,12h1v1h-1zM14,12h1v1h-1zM17,12h1v1h-1zM18,12h1v1h-1zM19,12h1v1h-1zM20,12h1v1h-1zM21,12h1v1h-1zM23,12h1v1h-1zM27,12h1v1h-1zM0,13h1v1h-1zM2,13h1v1h-1zM4,13h1v1h-1zM5,13h1v1h-1zM10,13h1v1h-1zM11,13h1v1h-1zM12,13h1v1h-1zM14,13h1v1h-1zM15,13h1v1h-1zM16,13h1v1h-1zM17,13h1v1h-1zM18,13h1v1h-1zM22,13h1v1h-1zM23,13h1v1h-1zM24,13h1v1h-1zM25,13h1v1h-1zM26,13h1v1h-1zM27,13h1v1h-1zM28,13h1v1h-1zM0,14h1v1h-1zM1,14h1v1h-1zM3,14h1v1h-1zM4,14h1v1h-1zM5,14h1v1h-1zM6,14h1v1h-1zM8,14h1v1h-1zM10,14h1v1h-1zM11,14h1v1h-1zM13,14h1v1h-1zM14,14h1v1h-1zM15,14h1v1h-1zM16,14h1v1h-1zM18,14h1v1h-1zM21,14h1v1h-1zM25,14h1v1h-1zM26,14h1v1h-1zM28,14h1v1h-1zM1,15h1v1h-1zM10,15h1v1h-1zM12,15h1v1h-1zM13,15h1v1h-1zM15,15h1v1h-1zM17,15h1v1h-1zM19,15h1v1h-1zM20,15h1v1h-1zM22,15h1v1h-1zM27,15h1v1h-1zM28,15h1v1h-1zM1,16h1v1h-1zM3,16h1v1h-1zM6,16h1v1h-1zM7,16h1v1h-1zM8,16h1v1h-1zM9,16h1v1h-1zM10,16h1v1h-1zM12,16h1v1h-1zM13,16h1v1h-1zM16,16h1v1h-1zM17,16h1v1h-1zM20,16h1v1h-1zM21,16h1v1h-1zM27,16h1v1h-1zM0,17h1v1h-1zM1,17h1v1h-1zM5,17h1v1h-1zM7,17h1v1h-1zM8,17h1v1h-1zM9,17h1v1h-1zM11,17h1v1h-1zM13,17h1v1h-1zM14,17h1v1h-1zM15,17h1v1h-1zM16,17h1v1h-1zM17,17h1v1h-1zM18,17h1v1h-1zM20,17h1v1h-1zM22,17h1v1h-1zM23,17h1v1h-1zM24,17h1v1h-1zM25,17h1v1h-1zM27,17h1v1h-1zM28,17h1v1h-1zM2,18h1v1h-1zM3,18h1v1h-1zM6,18h1v1h-1zM7,18h1v1h-1zM9,18h1v1h-1zM10,18h1v1h-1zM11,18h1v1h-1zM15,18h1v1h-1zM16,18h1v1h-1zM17,18h1v1h-1zM20,18h1v1h-1zM22,18h1v1h-1zM23,18h1v1h-1zM24,18h1v1h-1zM26,18h1v1h-1zM28,18h1v1h-1zM3,19h1v1h-1zM4,19h1v1h-1zM7,19h1v1h-1zM8,19h1v1h-1zM10,19h1v1h-1zM11,19h1v1h-1zM12,19h1v1h-1zM14,19h1v1h-1zM16,19h1v1h-1zM17,19h1v1h-1zM18,19h1v1h-1zM22,19h1v1h-1zM27,19h1v1h-1zM28,19h1v1h-1zM0,20h1v1h-1zM1,20h1v1h-1zM2,20h1v1h-1zM3,20h1v1h-1zM6,20h1v1h-1zM8,20h1v1h-1zM9,20h1v1h-1zM11,20h1v1h-1zM12,20h1v1h-1zM13,20h1v1h-1zM14,20h1v1h-1zM16,20h1v1h-1zM17,20h1v1h-1zM19,20h1v1h-1zM20,20h1v1h-1zM21,20h1v1h-1zM22,20h1v1h-1zM23,20h1v1h-1zM24,20h1v1h-1zM25,20h1v1h-1zM28,20h1v1h-1zM8,21h1v1h-1zM10,21h1v1h-1zM11,21h1v1h-1zM12,21h1v1h-1zM15,21h1v1h-1zM16,21h1v1h-1zM17,21h1v1h-1zM18,21h1v1h-1zM20,21h1v1h-1zM24,21h1v1h-1zM28,21h1v1h-1zM0,22h1v1h-1zM1,22h1v1h-1zM2,22h1v1h-1zM3,22h1v1h-1zM4,22h1v1h-1zM5,22h1v1h-1zM6,22h1v1h-1zM8,22h1v1h-1zM10,22h1v1h-1zM11,22h1v1h-1zM12,22h1v1h-1zM13,22h1v1h-1zM14,22h1v1h-1zM15,22h1v1h-1zM18,22h1v1h-1zM19,22h1v1h-1zM20,22h1v1h-1zM22,22h1v1h-1zM24,22h1v1h-1zM25,22h1v1h-1zM26,22h1v1h-1zM28,22h1v1h-1zM0,23h1v1h-1zM6,23h1v1h-1zM9,23h1v1h-1zM11,23h1v1h-1zM13,23h1v1h-1zM17,23h1v1h-1zM18,23h1v1h-1zM20,23h1v1h-1zM24,23h1v1h-1zM0,24h1v1h-1zM2,24h1v1h-1zM3,24h1v1h-1zM4,24h1v1h-1zM6,24h1v1h-1zM8,24h1v1h-1zM10,24h1v1h-1zM12,24h1v1h-1zM13,24h1v1h-1zM15,24h1v1h-1zM17,24h1v1h-1zM18,24h1v1h-1zM19,24h1v1h-1zM20,24h1v1h-1zM21,24h1v1h-1zM22,24h1v1h-1zM23,24h1v1h-1zM24,24h1v1h-1zM25,24h1v1h-1zM27,24h1v1h-1zM0,25h1v1h-1zM2,25h1v1h-1zM3,25h1v1h-1zM4,25h1v1h-1zM6,25h1v1h-1zM9,25h1v1h-1zM12,25h1v1h-1zM13,25h1v1h-1zM14,25h1v1h-1zM15,25h1v1h-1zM16,25h1v1h-1zM17,25h1v1h-1zM18,25h1v1h-1zM19,25h1v1h-1zM20,25h1v1h-1zM21,25h1v1h-1zM28,25h1v1h-1zM0,26h1v1h-1zM2,26h1v1h-1zM3,26h1v1h-1zM4,26h1v1h-1zM6,26h1v1h-1zM10,26h1v1h-1zM11,26h1v1h-1zM13,26h1v1h-1zM14,26h1v1h-1zM15,26h1v1h-1zM16,26h1v1h-1zM18,26h1v1h-1zM20,26h1v1h-1zM25,26h1v1h-1zM26,26h1v1h-1zM27,26h1v1h-1zM28,26h1v1h-1zM0,27h1v1h-1zM6,27h1v1h-1zM9,27h1v1h-1zM10,27h1v1h-1zM12,27h1v1h-1zM15,27h1v1h-1zM16,27h1v1h-1zM17,27h1v1h-1zM18,27h1v1h-1zM19,27h1v1h-1zM20,27h1v1h-1zM21,27h1v1h-1zM22,27h1v1h-1zM25,27h1v1h-1zM27,27h1v1h-1zM28,27h1v1h-1zM0,28h1v1h-1zM1,28h1v1h-1zM2,28h1v1h-1zM3,28h1v1h-1zM4,28h1v1h-1zM5,28h1v1h-1zM6,28h1v1h-1zM8,28h1v1h-1zM9,28h1v1h-1zM10,28h1v1h-1zM11,28h1v1h-1zM13,28h1v1h-1zM16,28h1v1h-1zM17,28h1v1h-1zM19,28h1v1h-1zM20,28h1v1h-1zM22,28h1v1h-1zM23,28h1v1h-1zM24,28h1v1h-1zM25,28h1v1h-1zM27,28h1v1h-1z" fill="#111111"></path></g>
+            </svg>
+            <p class="cv-qr__caption" data-i18n="cv-portfolio-caption">Scannez pour voir mon portfolio complet</p>
+            <p class="cv-qr__url">eferrier81.github.io/portfolio</p>
+          </div>
+        </section>
+      </aside>
+
+      <main class="cv-main">
+        <section class="cv-block">
+          <h2 data-i18n="cv-profile-title">Profil</h2>
+          <p data-i18n="cv-profile-text">
+            Étudiant ingénieur en 4e année à ISIS Castres, spécialisé en Systèmes d&apos;information en santé et
+            suivant un parcours d&apos;approfondissement en Intelligence Artificielle. Je conçois des solutions
+            logicielles et data au service de l&apos;amélioration des parcours de soins et des workflows hospitaliers.
+          </p>
+        </section>
+
+        <section class="cv-block">
+          <h2 data-i18n="cv-projects-title">Projets</h2>
+          <ul class="cv-entry-list">
+            <li>
+              <p class="cv-entry-title">Nuit de l&apos;Info 2024–2025 <span class="cv-entry-tags">HTML · CSS · JavaScript</span></p>
+              <p data-i18n="cv-project1-desc">
+                Application web collaborative réalisée lors de la Nuit de l&apos;Info, autour du thème
+                « Village Numérique Résistant » : interface responsive et fonctionnalités interactives.
+              </p>
+            </li>
+            <li>
+              <p class="cv-entry-title">The Hospital <span class="cv-entry-tags">Vue.js · Spring Boot · Kubernetes</span></p>
+              <p data-i18n="cv-project2-desc">
+                Application de valorisation des productions vidéo étudiantes&nbsp;: interface publique, espace admin
+                sécurisé, API REST et déploiement Kubernetes/CI-CD.
+              </p>
+            </li>
+            <li>
+              <p class="cv-entry-title">ALPOS – Grand Prix Sprint E-Santé <span class="cv-entry-tags">Python · Machine Learning</span></p>
+              <p data-i18n="cv-project3-desc">
+                Reconnaissance de mauvaises postures pour les aides à domicile&nbsp;: modèles de Machine Learning
+                entraînés sur des données de mouvement.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="cv-block">
+          <h2 data-i18n="experience-title">Expériences professionnelles</h2>
+          <ul class="cv-entry-list">
+            <li>
+              <p class="cv-entry-title" data-i18n="cv-exp1-title">Stage – Systèmes d&apos;information & IAM · CHIC <span class="cv-entry-dates">Avril–Juin 2025 · Castres</span></p>
+              <ul class="cv-bullets">
+                <li data-i18n="cv-exp1-b1">Étude et modélisation des workflows IAM pour les agents hospitaliers.</li>
+                <li data-i18n="cv-exp1-b2">Participation au Grand Prix Sprint E-Santé (projet ALPOS).</li>
+              </ul>
+            </li>
+            <li>
+              <p class="cv-entry-title" data-i18n="cv-exp2-title">Stage – Serious game PlaniTime · INU Champollion / ISIS <span class="cv-entry-dates">2026 · Castres</span></p>
+              <ul class="cv-bullets">
+                <li data-i18n="cv-exp2-b1">Conception d&apos;un serious game physique/numérique (Arduino, RFID, MQTT) pour la formation en soins infirmiers.</li>
+                <li data-i18n="cv-exp2-b2">Développement backend/frontend (Node.js, Vue 3) et pipeline de contenu narratif.</li>
+              </ul>
+            </li>
+            <li>
+              <p class="cv-entry-title" data-i18n="cv-exp3-title">Stage ouvrier – Granits Michel MAFFRE <span class="cv-entry-dates">Mai 2023</span></p>
+              <ul class="cv-bullets">
+                <li data-i18n="cv-exp3-b1">Manutention, découpe et traitement de matériaux dans le secteur industriel.</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section class="cv-block">
+          <h2 data-i18n="cv-education-title">Formation</h2>
+          <p class="cv-entry-title" data-i18n="cv-education-title-entry">Diplôme d&apos;ingénieur — Informatique & E-santé <span class="cv-entry-dates">2023–2026</span></p>
+          <p data-i18n="cv-education-text">ISIS Castres — parcours d&apos;approfondissement en Intelligence Artificielle.</p>
+        </section>
+      </main>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

@@ -290,6 +290,47 @@ ul {
   width: 100%;
 }
 
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-left: 0.5rem;
+}
+
+.navbar__action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: rgba(22, 31, 26, 0.5);
+  color: var(--color-text-soft);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--duration-fast) var(--ease-out-expo);
+}
+
+.navbar__action-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.navbar__action-btn--primary {
+  border-color: rgba(52, 211, 153, 0.35);
+  background: rgba(52, 211, 153, 0.1);
+  color: var(--color-accent);
+}
+
+.navbar__action-btn--primary:hover {
+  background: rgba(52, 211, 153, 0.18);
+  color: var(--color-accent-light);
+  border-color: var(--color-accent);
+}
+
 .navbar__toggle {
   display: none;
   flex-direction: column;
@@ -1176,6 +1217,17 @@ textarea {
     grid-template-columns: minmax(0, 1fr);
   }
 
+  .navbar__actions {
+    width: 100%;
+    margin-left: 0;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .navbar__action-btn {
+    flex: 1;
+  }
+
   .hero {
     min-height: auto;
     padding-top: calc(var(--nav-height) + 3rem);
@@ -1210,5 +1262,334 @@ textarea {
 
   .hero__name {
     font-size: clamp(2.2rem, 16vw, 4rem);
+  }
+}
+
+/* ============================================================
+   CV IMPRIMABLE — mise en page dédiée (une page), visible
+   uniquement à l'impression / export PDF via le bouton
+   "Imprimer le CV". Reprend les couleurs et polices du
+   portfolio (dégradé émeraude → violet, Sora/Inter).
+   ============================================================ */
+
+.print-cv {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+  }
+
+  /* Seul le CV imprimable est affiché : on masque tout le reste du site. */
+  body > *:not(.print-cv) {
+    display: none !important;
+  }
+
+  .print-cv {
+    display: block !important;
+    font-family: var(--font-body);
+    color: #17211c;
+    background: #fff;
+  }
+
+  .print-cv h1,
+  .print-cv h2 {
+    font-family: var(--font-display);
+    margin: 0;
+  }
+
+  .print-cv p,
+  .print-cv li {
+    margin: 0;
+  }
+
+  .print-cv h2 {
+    font-size: 10.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #0a6e46;
+    padding-bottom: 1.3mm;
+    margin-bottom: 2.5mm;
+    border-bottom: 1px solid #0a6e46;
+  }
+
+  .cv-block + .cv-block {
+    margin-top: 3.5mm;
+    break-inside: avoid;
+  }
+
+  /* — En-tête : photo + nom, dégradé de marque — */
+  .cv-header {
+    display: flex;
+    align-items: center;
+    gap: 9mm;
+    padding: 8.5mm 14mm;
+    background: linear-gradient(135deg, #0a6e46, #4a3a8a);
+    color: #fff;
+  }
+
+  .cv-header__photo {
+    width: 27mm;
+    height: 27mm;
+    border-radius: 999px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 2.5px solid rgba(255, 255, 255, 0.7);
+  }
+
+  .cv-header__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 20%;
+  }
+
+  .cv-header__identity h1 {
+    font-size: 26pt;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  .cv-header__identity p {
+    margin-top: 2mm !important;
+    font-size: 10.5pt;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  /* — Corps : colonne latérale + colonne principale — */
+  .cv-body {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .cv-sidebar {
+    width: 65mm;
+    flex-shrink: 0;
+    background: #eef5f1;
+    padding: 8mm 8mm;
+  }
+
+  .cv-main {
+    flex: 1;
+    padding: 9mm 14mm 9mm 11mm;
+  }
+
+  /* — Colonne latérale : contact — */
+  .cv-contact-list,
+  .cv-lang-list,
+  .cv-simple-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.3mm;
+  }
+
+  .cv-contact-list li {
+    font-size: 9pt;
+    line-height: 1.35;
+    word-break: break-word;
+  }
+
+  .cv-contact-list a {
+    color: #17211c;
+    text-decoration: none;
+  }
+
+  .cv-contact-list__label {
+    display: block;
+    font-size: 7.2pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #5c6b62;
+    margin-bottom: 0.4mm;
+  }
+
+  /* — Colonne latérale : langues, avec barre de niveau CECRL — */
+  .cv-lang-scale {
+    font-size: 7.2pt !important;
+    font-style: italic;
+    color: #5c6b62;
+    margin: -1.5mm 0 2mm !important;
+  }
+
+  .cv-lang-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9pt;
+    margin-bottom: 1mm;
+  }
+
+  .cv-lang-row span:last-child {
+    color: #5c6b62;
+    font-size: 8pt;
+    font-weight: 600;
+  }
+
+  .cv-bar {
+    height: 1.8mm;
+    border-radius: 999px;
+    background: #d7e3dc;
+    overflow: hidden;
+  }
+
+  .cv-bar__fill {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #0a6e46, #4a3a8a);
+    border-radius: inherit;
+  }
+
+  .cv-bar__fill--100 {
+    width: 100%;
+  }
+
+  .cv-bar__fill--67 {
+    width: 67%;
+  }
+
+  .cv-bar__fill--17 {
+    width: 17%;
+  }
+
+  /* — Colonne latérale : compétences & centres d'intérêt — */
+  .cv-simple-list li {
+    position: relative;
+    padding-left: 3.2mm;
+    font-size: 9pt;
+    line-height: 1.35;
+  }
+
+  .cv-simple-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1mm;
+    width: 1.5mm;
+    height: 1.5mm;
+    border-radius: 999px;
+    background: #0a6e46;
+  }
+
+  /* — Colonne latérale : QR code vers le portfolio en ligne — */
+  .cv-block--qr h2 {
+    margin-bottom: 3mm;
+  }
+
+  .cv-qr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5mm;
+  }
+
+  .cv-qr__code {
+    width: 21mm;
+    height: 21mm;
+    border: 1px solid #d7e3dc;
+    border-radius: 2mm;
+    background: #fff;
+  }
+
+  .cv-qr__caption {
+    font-size: 7.8pt !important;
+    line-height: 1.25;
+    color: #2b352f;
+    max-width: 56mm;
+    white-space: nowrap;
+  }
+
+  .cv-qr__url {
+    font-size: 7.6pt !important;
+    color: #0a6e46;
+    font-weight: 600;
+    word-break: break-all;
+  }
+
+  /* — Colonne principale — */
+  .cv-main .cv-block p {
+    font-size: 9.3pt;
+    line-height: 1.45;
+    color: #2b352f;
+  }
+
+  .cv-entry-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4.5mm;
+  }
+
+  .cv-entry-list > li {
+    break-inside: avoid;
+  }
+
+  .cv-main .cv-block p.cv-entry-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 2mm;
+    font-size: 10pt;
+    font-weight: 700;
+    color: #17211c;
+    line-height: 1.3;
+  }
+
+  .cv-entry-dates,
+  .cv-entry-tags {
+    font-weight: 500;
+    font-size: 8.2pt;
+    color: #5c6b62;
+    white-space: nowrap;
+  }
+
+  .cv-bullets {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.3mm !important;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1mm;
+  }
+
+  .cv-bullets li {
+    position: relative;
+    padding-left: 3.4mm;
+    font-size: 9pt;
+    line-height: 1.4;
+    color: #2b352f;
+  }
+
+  .cv-bullets li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1mm;
+    width: 1.5mm;
+    height: 1.5mm;
+    border-radius: 999px;
+    background: #4a3a8a;
   }
 }
