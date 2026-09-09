@@ -210,7 +210,7 @@ const translationsEn = {
   "cv-lang-zh-name": "Chinese",
   "cv-level-native": "C2 · Native language",
   "cv-skill-1": "Python & Web development",
-  "cv-skill-2": "Docker, Kubernetes, CI/CD",
+  "cv-skill-2": "SQL, Docker, Kubernetes, CI/CD",
   "cv-skill-3": "Health information systems & IAM",
   "cv-skill-4": "Machine Learning & Data Science",
   "cv-skill-5": "Project management",
@@ -223,7 +223,7 @@ const translationsEn = {
   "cv-portfolio-caption": "Scan to see my full portfolio",
 
   "cv-profile-title": "Profile",
-  "cv-profile-text": `Final-year (5th-year) engineering student at ISIS Castres, specializing in Health Information Systems and following an advanced track in Artificial Intelligence. I design software and data solutions to improve care pathways and hospital workflows. Looking for a final-year internship (22 to 26 weeks), available from January/February 2027.`,
+  "cv-profile-text": `Final-year (5th-year) engineering student at ISIS Castres, skilled in software development, data and infrastructure (cloud, automation). Specializing in Health Information Systems with an AI track, applied to care pathways and hospital workflows. Looking for a final-year internship (22 to 26 weeks), available from January/February 2027.`,
 
   "cv-projects-title": "Projects",
   "cv-project1-desc": `Collaborative web app built during the Nuit de l'Info hackathon, around the theme "Resilient Digital Village": responsive interface and interactive features.`,

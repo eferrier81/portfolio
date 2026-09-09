@@ -1476,6 +1476,10 @@ textarea {
   }
 
   /* — Colonne latérale : compétences & centres d'intérêt — */
+  .cv-simple-list {
+    gap: 1.6mm;
+  }
+
   .cv-simple-list li {
     position: relative;
     padding-left: 3.2mm;
