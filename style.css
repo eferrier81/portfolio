@@ -1,39 +1,45 @@
 /* ============================================================
    PORTFOLIO — Enzo Ferrier
-   Charte "Bio-Digital" : fond charbon/forêt, accent émeraude
-   (informatique & e-santé), touche violette rare pour le
-   parcours IA. Animations douces, cartes arrondies, marquee,
-   glow au survol.
+   Identité inspirée de la charte graphique ISIS : encre bleue
+   #2f0d73, dégradé violet → magenta → corail (sur fond blanc ou
+   bleu principal uniquement), accents ponctuels sarcelle & jaune.
+   Typographie Plus Jakarta Sans. Aplats nets, motifs hachurés,
+   pas de glow ni de flou lumineux.
+
+   Thèmes : toutes les couleurs dépendantes du thème sont des
+   custom properties définies deux fois — une fois par défaut sur
+   :root (thème sombre) et une fois en surcharge sur
+   [data-theme="light"]. Les règles de composants ci-dessous ne
+   consomment que ces variables, sans jamais coder une couleur en
+   dur ni dupliquer de règle par thème.
    ============================================================ */
 
 :root {
-  /* Palette */
-  --color-bg: #0e1512;
-  --color-bg-alt: #121a15;
-  --color-surface: #161f1a;
-  --color-border: rgba(238, 241, 236, 0.12);
-  --color-accent: #34d399;
-  --color-accent-light: #6ee7b7;
-  --color-accent-glow: rgba(52, 211, 153, 0.28);
-  --color-secondary: #a78bfa;
-  --color-secondary-glow: rgba(167, 139, 250, 0.25);
-  --color-text: #eef1ec;
-  --color-text-soft: #9fb0a4;
-  --color-danger: #f87171;
+  /* ——— Constantes de marque (identiques dans les deux thèmes) ——— */
+  --color-accent: #7c50de;
+  --color-accent-2: #ac54c7;
+  --color-accent-3: #f56960;
+  --gradient-brand: linear-gradient(135deg, #7c50de 0%, #ac54c7 55%, #f56960 100%);
+
+  --color-secondary: #3cbebe;
+  --color-highlight: #ffb43c;
+
+  /* Texte posé sur un aplat de marque saturé (bouton, logo, sélection) */
+  --color-on-accent: #ffffff;
+
+  /* Logos partenaires : images externes conçues pour un fond clair —
+     leur chip reste volontairement fixe, indépendante du thème actif. */
+  --color-logo-chip-bg: #ffffff;
+  --color-logo-chip-border: rgba(47, 13, 115, 0.14);
 
   /* Typography */
-  --font-body: "Inter", system-ui, -apple-system, sans-serif;
-  --font-display: "Sora", "Inter", system-ui, sans-serif;
+  --font-body: "Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
 
-  /* Sizing */
+  /* Sizing — pilule réservée aux vrais badges/tags/points */
   --radius-sm: 8px;
   --radius-md: 12px;
-  --radius-lg: 20px;
-  --radius-xl: 28px;
-
-  /* Shadows */
-  --shadow-soft: 0 20px 50px rgba(0, 0, 0, 0.5);
-  --shadow-glow-accent: 0 0 60px var(--color-accent-glow);
+  --radius-lg: 16px;
 
   /* Motion */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -46,12 +52,108 @@
   --container-max: 1140px;
   --section-padding: 6rem;
   --nav-height: 4rem;
+
+  /* ——— Thème sombre (par défaut) ———
+     Fond bleu principal ISIS ; surfaces/cartes en variante
+     légèrement assombrie ; texte clair ; jaune en accent ponctuel. */
+  --color-bg: #2f0d73;
+  --color-bg-alt: #260a63;
+  --color-surface: #200752;
+  --color-ink: #ffffff;
+  --color-text: #f4f1fb;
+  --color-text-soft: #c9c0e0;
+  --color-text-faint: rgba(255, 255, 255, 0.55);
+
+  --color-border: rgba(255, 255, 255, 0.16);
+  --color-border-strong: rgba(255, 255, 255, 0.32);
+  --color-surface-tint: rgba(255, 255, 255, 0.07);
+
+  --color-accent-tint-weak: rgba(124, 80, 222, 0.16);
+  --color-accent-tint-medium: rgba(124, 80, 222, 0.28);
+  --color-accent-tint-strong: rgba(124, 80, 222, 0.45);
+
+  /* Variantes éclaircies de l'accent, utilisées comme COULEUR DE
+     TEXTE/TRAIT sur fond sombre (l'accent brut manque de contraste
+     posé tel quel sur #2f0d73) — l'accent brut reste réservé aux
+     aplats (dégradé, fonds pleins). */
+  --color-accent-text: #b79cf0;
+  --color-accent-2-text: #d68fe0;
+  --color-secondary-text: var(--color-secondary);
+
+  /* Jaune/violet clair utilisés pour les petits libellés qui doivent
+     rester lisibles quel que soit le thème (kicker, lien de pied de
+     page) */
+  --color-pop: var(--color-highlight);
+
+  --color-danger: var(--color-accent-3);
+  --color-success: var(--color-secondary);
+
+  --color-scrollbar: rgba(255, 255, 255, 0.22);
+  --color-scrollbar-hover: rgba(255, 255, 255, 0.38);
+
+  --color-avatar-border: rgba(255, 255, 255, 0.35);
+
+  --color-nav-bg: rgba(47, 13, 115, 0.7);
+  --color-nav-bg-scrolled: rgba(38, 10, 90, 0.92);
+  --color-panel-bg: rgba(32, 7, 82, 0.98);
+
+  --pattern-line: rgba(255, 255, 255, 0.06);
+
+  /* Ombres neutres et discrètes — jamais de glow coloré */
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 28px rgba(0, 0, 0, 0.32);
+  --shadow-lift: 0 18px 40px rgba(0, 0, 0, 0.4);
+  --shadow-focus-ring: 0 0 0 3px rgba(124, 80, 222, 0.35);
+}
+
+/* ——— Thème clair ———
+   Fond blanc, texte en bleu principal, mêmes accents de marque
+   utilisés sur ce fond blanc (autorisé par la charte). */
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-bg-alt: #f4f1fb;
+  --color-surface: #ffffff;
+  --color-ink: #2f0d73;
+  --color-text: #201432;
+  --color-text-soft: #5c5470;
+  --color-text-faint: rgba(47, 13, 115, 0.35);
+
+  --color-border: rgba(47, 13, 115, 0.14);
+  --color-border-strong: rgba(47, 13, 115, 0.24);
+  --color-surface-tint: rgba(47, 13, 115, 0.04);
+
+  --color-accent-tint-weak: rgba(124, 80, 222, 0.08);
+  --color-accent-tint-medium: rgba(124, 80, 222, 0.16);
+  --color-accent-tint-strong: rgba(124, 80, 222, 0.3);
+
+  --color-accent-text: var(--color-accent);
+  --color-accent-2-text: var(--color-accent-2);
+  --color-secondary-text: #1f7d74;
+
+  --color-pop: var(--color-accent-text);
+
+  --color-danger: #c9433a;
+  --color-success: #1f7d74;
+
+  --color-scrollbar: rgba(47, 13, 115, 0.2);
+  --color-scrollbar-hover: rgba(47, 13, 115, 0.35);
+
+  --color-avatar-border: rgba(47, 13, 115, 0.18);
+
+  --color-nav-bg: rgba(255, 255, 255, 0.72);
+  --color-nav-bg-scrolled: rgba(255, 255, 255, 0.94);
+  --color-panel-bg: rgba(255, 255, 255, 0.97);
+
+  --pattern-line: rgba(47, 13, 115, 0.05);
+
+  --shadow-soft: 0 1px 2px rgba(47, 13, 115, 0.06), 0 12px 28px rgba(47, 13, 115, 0.08);
+  --shadow-lift: 0 18px 36px rgba(47, 13, 115, 0.14);
+  --shadow-focus-ring: 0 0 0 3px rgba(124, 80, 222, 0.15);
 }
 
 /* Selection */
 ::selection {
   background: var(--color-accent);
-  color: #000;
+  color: var(--color-on-accent);
 }
 
 /* Reset & base */
@@ -74,6 +176,8 @@ body {
   line-height: 1.6;
   background: var(--color-bg);
   color: var(--color-text);
+  transition: background var(--duration-default) var(--ease-out-expo),
+              color var(--duration-default) var(--ease-out-expo);
 }
 
 /* Scrollbar */
@@ -84,11 +188,11 @@ body {
   background: var(--color-bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(238, 241, 236, 0.18);
+  background: var(--color-scrollbar);
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(238, 241, 236, 0.32);
+  background: var(--color-scrollbar-hover);
 }
 
 img {
@@ -122,7 +226,7 @@ h4 {
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  color: var(--color-text);
+  color: var(--color-ink);
 }
 
 h2 {
@@ -157,10 +261,7 @@ ul {
 
 .section--alt {
   padding: var(--section-padding) 0;
-  background:
-    radial-gradient(ellipse at 20% 0%, rgba(52, 211, 153, 0.08), transparent 50%),
-    radial-gradient(ellipse at 80% 100%, rgba(167, 139, 250, 0.06), transparent 50%),
-    var(--color-bg-alt);
+  background: var(--color-bg-alt);
 }
 
 .section__inner {
@@ -173,12 +274,27 @@ ul {
 }
 
 .section__kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-accent-text);
   margin-bottom: 0.75rem;
   font-weight: 600;
+}
+
+.section__kicker::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 6px;
+  flex-shrink: 0;
+  background-image: radial-gradient(circle, currentColor 1.4px, transparent 1.6px);
+  background-size: 6px 6px;
+  background-repeat: repeat-x;
+  opacity: 0.6;
 }
 
 .section__subtitle {
@@ -198,15 +314,15 @@ ul {
   z-index: 100;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  background: rgba(14, 21, 18, 0.6);
+  background: var(--color-nav-bg);
   border-bottom: 1px solid var(--color-border);
   transition: background var(--duration-default) var(--ease-out-expo),
               border-color var(--duration-default) var(--ease-out-expo);
 }
 
 .site-header.is-scrolled {
-  background: rgba(14, 21, 18, 0.92);
-  border-color: rgba(238, 241, 236, 0.15);
+  background: var(--color-nav-bg-scrolled);
+  border-color: var(--color-border-strong);
 }
 
 .navbar {
@@ -229,14 +345,14 @@ ul {
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--color-accent), var(--color-secondary));
+  background: var(--gradient-brand);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.85rem;
   font-weight: 700;
   font-family: var(--font-display);
-  color: var(--color-bg);
+  color: var(--color-on-accent);
   transition: transform var(--duration-fast) var(--ease-out-expo);
 }
 
@@ -249,6 +365,7 @@ ul {
   font-weight: 600;
   font-family: var(--font-display);
   letter-spacing: -0.01em;
+  color: var(--color-ink);
 }
 
 .navbar__links {
@@ -262,7 +379,7 @@ ul {
 
 .navbar__links a {
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--color-text-soft);
   position: relative;
   padding-bottom: 2px;
@@ -276,13 +393,12 @@ ul {
   bottom: -2px;
   width: 0;
   height: 2px;
-  border-radius: 999px;
-  background: var(--color-accent);
+  background: var(--color-accent-text);
   transition: width var(--duration-default) var(--ease-out-expo);
 }
 
 .navbar__links a:hover {
-  color: var(--color-text);
+  color: var(--color-ink);
 }
 
 .navbar__links a:hover::after,
@@ -302,13 +418,13 @@ ul {
   align-items: center;
   justify-content: center;
   padding: 0.4rem 0.9rem;
-  border-radius: 999px;
+  border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
-  background: rgba(22, 31, 26, 0.5);
+  background: var(--color-surface-tint);
   color: var(--color-text-soft);
   font-family: var(--font-body);
   font-size: 0.78rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
   transition: all var(--duration-fast) var(--ease-out-expo);
@@ -316,18 +432,41 @@ ul {
 
 .navbar__action-btn:hover {
   border-color: var(--color-accent);
-  color: var(--color-accent);
+  color: var(--color-accent-text);
+}
+
+.navbar__action-btn--icon {
+  width: 36px;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.navbar__action-btn--icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.navbar__action-btn--icon .icon-moon {
+  display: none;
+}
+
+[data-theme="light"] .navbar__action-btn--icon .icon-sun {
+  display: none;
+}
+
+[data-theme="light"] .navbar__action-btn--icon .icon-moon {
+  display: block;
 }
 
 .navbar__action-btn--primary {
-  border-color: rgba(52, 211, 153, 0.35);
-  background: rgba(52, 211, 153, 0.1);
-  color: var(--color-accent);
+  border-color: var(--color-accent-tint-strong);
+  background: var(--color-accent-tint-weak);
+  color: var(--color-accent-text);
 }
 
 .navbar__action-btn--primary:hover {
-  background: rgba(52, 211, 153, 0.18);
-  color: var(--color-accent-light);
+  background: var(--color-accent-tint-medium);
+  color: var(--color-ink);
   border-color: var(--color-accent);
 }
 
@@ -340,7 +479,7 @@ ul {
   height: 40px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--color-border);
-  background: rgba(22, 31, 26, 0.6);
+  background: var(--color-surface-tint);
   cursor: pointer;
   transition: border-color var(--duration-fast) ease;
 }
@@ -352,8 +491,7 @@ ul {
 .navbar__toggle-line {
   width: 18px;
   height: 2px;
-  border-radius: 999px;
-  background: var(--color-text);
+  background: var(--color-ink);
   margin: 0 auto;
   transition: transform var(--duration-fast) var(--ease-out-expo),
               opacity var(--duration-fast) ease;
@@ -368,6 +506,9 @@ ul {
 }
 
 /* ——— Hero ——— */
+/* Fond de page en aplat net (pas de halo flou) : le dégradé de
+   marque n'apparaît que sur ce fond, blanc ou bleu principal selon
+   le thème actif. */
 
 .hero {
   position: relative;
@@ -377,16 +518,42 @@ ul {
   justify-content: center;
   padding: calc(var(--nav-height) + 2rem) 0 0;
   overflow: hidden;
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
 .hero__bg {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse at 30% 20%, rgba(52, 211, 153, 0.16), transparent 50%),
-    radial-gradient(ellipse at 70% 80%, rgba(167, 139, 250, 0.1), transparent 50%),
-    radial-gradient(ellipse at 50% 50%, var(--color-bg) 0%, transparent 100%);
   z-index: -1;
+  overflow: hidden;
+}
+
+/* Bloc de dégradé franc, coupe diagonale nette — pas de flou */
+.hero__bg::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  right: -18%;
+  width: 60%;
+  height: 140%;
+  background: var(--gradient-brand);
+  clip-path: polygon(38% 0, 100% 0, 100% 100%, 0% 100%);
+  opacity: 0.9;
+}
+
+/* Motif haché diagonal, cohérent avec le fond du thème actif */
+.hero__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--pattern-line) 0px,
+    var(--pattern-line) 1px,
+    transparent 1px,
+    transparent 13px
+  );
 }
 
 .hero__content {
@@ -405,7 +572,7 @@ ul {
   font-size: 0.8rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-pop);
   font-weight: 600;
 }
 
@@ -416,11 +583,12 @@ ul {
 .hero__name {
   font-family: var(--font-display);
   font-size: clamp(3.5rem, 12vw, 9rem);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 0.9;
   letter-spacing: -0.04em;
   margin: 0;
   text-transform: uppercase;
+  color: var(--color-ink);
 }
 
 .hero__name-line {
@@ -428,7 +596,7 @@ ul {
 }
 
 .hero__name-line--accent {
-  background: linear-gradient(135deg, var(--color-accent), var(--color-secondary));
+  background: var(--gradient-brand);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -446,10 +614,11 @@ ul {
   line-height: 1.75;
   margin-bottom: 1.5rem;
   max-width: 480px;
+  color: var(--color-text-soft);
 }
 
 .hero__subtitle strong {
-  color: var(--color-text);
+  color: var(--color-ink);
 }
 
 .hero__actions {
@@ -467,10 +636,10 @@ ul {
 .hero__avatar {
   width: 180px;
   height: 180px;
-  border-radius: 24px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 2px solid var(--color-border);
-  box-shadow: var(--shadow-soft);
+  border: 2px solid var(--color-avatar-border);
+  box-shadow: var(--shadow-lift);
   flex-shrink: 0;
   transition: transform var(--duration-default) var(--ease-out-expo),
               border-color var(--duration-default) ease;
@@ -478,7 +647,7 @@ ul {
 
 .hero__avatar:hover {
   transform: scale(1.03);
-  border-color: var(--color-accent);
+  border-color: var(--color-highlight);
 }
 
 .hero__avatar img {
@@ -515,22 +684,36 @@ ul {
   width: 4px;
   height: 4px;
   border-radius: 999px;
-  background: var(--color-accent);
+  background: var(--color-pop);
 }
 
 /* ——— Marquee ——— */
 
 .marquee {
+  position: relative;
   width: 100%;
   overflow: hidden;
   padding: 1.5rem 0;
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-  background: rgba(22, 31, 26, 0.4);
+  background: var(--color-bg-alt);
   margin-top: clamp(2rem, 6vh, 4rem);
 }
 
+.marquee::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--pattern-line) 0px,
+    var(--pattern-line) 1px,
+    transparent 1px,
+    transparent 11px
+  );
+  pointer-events: none;
+}
+
 .marquee__track {
+  position: relative;
   display: flex;
   width: max-content;
   animation: marquee-scroll 25s linear infinite;
@@ -542,7 +725,7 @@ ul {
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: rgba(159, 176, 164, 0.45);
+  color: var(--color-text-faint);
   white-space: nowrap;
   padding-right: 2rem;
 }
@@ -560,53 +743,51 @@ ul {
   justify-content: center;
   gap: 0.4rem;
   padding: 0.7rem 1.5rem;
-  border-radius: 999px;
+  border-radius: var(--radius-md);
   border: 1px solid transparent;
   font-family: var(--font-body);
   font-size: 0.88rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   text-decoration: none;
   transition: all var(--duration-fast) var(--ease-out-expo);
 }
 
 .btn--primary {
-  background: var(--color-accent);
-  color: #000;
-  font-weight: 600;
+  background: var(--gradient-brand);
+  color: var(--color-on-accent);
+  font-weight: 700;
   border: none;
-  box-shadow: 0 0 30px var(--color-accent-glow);
+  box-shadow: var(--shadow-soft);
 }
 
 .btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 40px var(--color-accent-glow);
-  background: var(--color-accent-light);
+  box-shadow: var(--shadow-lift);
 }
 
 .btn--ghost {
-  border-color: rgba(238, 241, 236, 0.2);
-  background: rgba(22, 31, 26, 0.5);
-  color: var(--color-text);
-  backdrop-filter: blur(8px);
+  border-color: var(--color-border-strong);
+  background: var(--color-surface-tint);
+  color: var(--color-ink);
 }
 
 .btn--ghost:hover {
   border-color: var(--color-accent);
-  background: rgba(52, 211, 153, 0.08);
-  color: var(--color-accent);
+  background: var(--color-accent-tint-weak);
+  color: var(--color-ink);
 }
 
 .btn--link {
   padding: 0;
   border: none;
   background: none;
-  color: var(--color-accent);
-  font-weight: 500;
+  color: var(--color-accent-text);
+  font-weight: 600;
 }
 
 .btn--link:hover {
-  color: var(--color-accent-light);
+  color: var(--color-accent-2-text);
 }
 
 /* ——— Grids ——— */
@@ -623,7 +804,7 @@ ul {
 /* ——— Cards ——— */
 
 .card {
-  background: rgba(22, 31, 26, 0.5);
+  background: var(--color-surface);
   border-radius: var(--radius-lg);
   padding: 1.75rem;
   border: 1px solid var(--color-border);
@@ -635,26 +816,29 @@ ul {
   overflow: hidden;
 }
 
-/* Subtle gradient glow on hover */
+/* Liseré de dégradé net en haut de carte, révélé au survol —
+   un aplat franc, pas un halo flou */
 .card::before {
   content: "";
   position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: radial-gradient(ellipse at 50% 0%, var(--color-accent-glow), transparent 70%);
-  opacity: 0;
-  transition: opacity var(--duration-default) ease;
-  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-brand);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--duration-default) var(--ease-out-expo);
 }
 
 .card:hover {
   transform: translateY(-4px);
-  border-color: rgba(238, 241, 236, 0.2);
-  box-shadow: var(--shadow-soft), var(--shadow-glow-accent);
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-lift);
 }
 
 .card:hover::before {
-  opacity: 1;
+  transform: scaleX(1);
 }
 
 .card h3 {
@@ -681,17 +865,17 @@ ul {
   padding: 0.2rem 0.65rem;
   border-radius: 999px;
   font-size: 0.75rem;
-  font-weight: 500;
-  background: rgba(52, 211, 153, 0.08);
-  border: 1px solid rgba(52, 211, 153, 0.2);
-  color: var(--color-accent);
+  font-weight: 600;
+  background: var(--color-accent-tint-weak);
+  border: 1px solid var(--color-accent-tint-medium);
+  color: var(--color-accent-text);
   transition: background var(--duration-fast) ease,
               border-color var(--duration-fast) ease;
 }
 
 .card:hover .tag-list li {
-  background: rgba(52, 211, 153, 0.12);
-  border-color: rgba(52, 211, 153, 0.3);
+  background: var(--color-accent-tint-medium);
+  border-color: var(--color-accent-tint-strong);
 }
 
 /* ——— About ——— */
@@ -708,18 +892,18 @@ ul {
 .about-list li {
   padding: 0.75rem 1rem;
   border-radius: var(--radius-md);
-  background: rgba(22, 31, 26, 0.5);
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   font-size: 0.92rem;
   transition: border-color var(--duration-fast) ease;
 }
 
 .about-list li:hover {
-  border-color: rgba(52, 211, 153, 0.3);
+  border-color: var(--color-accent-tint-strong);
 }
 
 .about-list li strong {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
 }
 
 .partner-logos {
@@ -736,9 +920,9 @@ ul {
   max-width: 190px;
   object-fit: contain;
   padding: 0.55rem 1rem;
-  background: rgba(238, 241, 236, 0.94);
+  background: var(--color-logo-chip-bg);
   border-radius: var(--radius-md);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-logo-chip-border);
   transition: border-color var(--duration-fast) ease,
               transform var(--duration-fast) var(--ease-out-expo);
 }
@@ -762,8 +946,8 @@ ul {
 
 .skill-card__note {
   font-size: 0.65em;
-  font-weight: 500;
-  color: var(--color-secondary);
+  font-weight: 600;
+  color: var(--color-secondary-text);
 }
 
 .languages {
@@ -789,18 +973,18 @@ ul {
   gap: 1rem;
   padding: 0.55rem 1rem;
   border-radius: var(--radius-md);
-  background: rgba(22, 31, 26, 0.5);
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   transition: border-color var(--duration-fast) ease;
 }
 
 .languages-list li:hover {
-  border-color: rgba(52, 211, 153, 0.3);
+  border-color: var(--color-accent-tint-strong);
 }
 
 .languages-list__level {
-  color: var(--color-accent);
-  font-weight: 500;
+  color: var(--color-accent-text);
+  font-weight: 600;
 }
 
 /* ——— Projects ——— */
@@ -827,8 +1011,8 @@ ul {
   width: 52px;
   height: 52px;
   border-radius: var(--radius-md);
-  background: rgba(22, 31, 26, 0.9);
-  border: 1px solid var(--color-border);
+  background: var(--color-logo-chip-bg);
+  border: 1px solid var(--color-logo-chip-border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -843,8 +1027,8 @@ ul {
 
 .project-card__role {
   font-size: 0.82rem;
-  color: var(--color-accent);
-  font-weight: 500;
+  color: var(--color-accent-text);
+  font-weight: 600;
 }
 
 .project-card__actions {
@@ -902,7 +1086,7 @@ ul {
   height: 32px;
   border-radius: 999px;
   border: 1px solid var(--color-border);
-  background: rgba(22, 31, 26, 0.5);
+  background: var(--color-surface);
   color: var(--color-text-soft);
   cursor: pointer;
   display: flex;
@@ -914,7 +1098,7 @@ ul {
 
 .slideshow__btn:hover {
   border-color: var(--color-accent);
-  color: var(--color-accent);
+  color: var(--color-accent-text);
   transform: scale(1.08);
 }
 
@@ -928,14 +1112,14 @@ ul {
   width: 8px;
   height: 8px;
   border-radius: 999px;
-  background: rgba(238, 241, 236, 0.25);
+  background: var(--color-scrollbar);
   transition: all var(--duration-fast) var(--ease-out-expo);
   cursor: pointer;
 }
 
 .slideshow__dot--active {
   width: 24px;
-  background: var(--color-accent);
+  background: var(--color-accent-text);
 }
 
 /* ——— Timeline ——— */
@@ -954,7 +1138,7 @@ ul {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, var(--color-accent), rgba(52, 211, 153, 0.1));
+  background: linear-gradient(to bottom, var(--color-accent-text), var(--color-accent-tint-weak));
 }
 
 .timeline__item {
@@ -970,8 +1154,8 @@ ul {
   width: 16px;
   height: 16px;
   border-radius: 999px;
-  background: var(--color-accent);
-  box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.15), 0 0 20px rgba(52, 211, 153, 0.2);
+  background: var(--color-accent-text);
+  box-shadow: 0 0 0 4px var(--color-bg);
 }
 
 .timeline__content {
@@ -985,8 +1169,8 @@ ul {
 
 .timeline__role {
   font-size: 0.88rem;
-  color: var(--color-accent);
-  font-weight: 500;
+  color: var(--color-accent-text);
+  font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
@@ -1010,7 +1194,7 @@ ul {
 
 label {
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--color-text-soft);
 }
 
@@ -1018,7 +1202,7 @@ input,
 textarea {
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
-  background: rgba(22, 31, 26, 0.6);
+  background: var(--color-surface);
   color: var(--color-text);
   padding: 0.7rem 0.9rem;
   font-family: inherit;
@@ -1030,8 +1214,8 @@ textarea {
 
 input:focus-visible,
 textarea:focus-visible {
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.12);
+  border-color: var(--color-accent-text);
+  box-shadow: var(--shadow-focus-ring);
 }
 
 textarea {
@@ -1049,7 +1233,7 @@ textarea {
 }
 
 .form-status--success {
-  color: var(--color-accent);
+  color: var(--color-success);
 }
 
 .form-status--error {
@@ -1058,7 +1242,7 @@ textarea {
 
 .contact-info {
   padding: 1.75rem;
-  background: rgba(22, 31, 26, 0.5);
+  background: var(--color-surface);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
 }
@@ -1076,12 +1260,12 @@ textarea {
 }
 
 .contact-info__list a {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
   transition: color var(--duration-fast) ease;
 }
 
 .contact-info__list a:hover {
-  color: var(--color-accent-light);
+  color: var(--color-accent-2-text);
 }
 
 .contact-info__label {
@@ -1102,8 +1286,8 @@ textarea {
 
 .site-footer {
   padding: 2rem 0;
-  border-top: 1px solid var(--color-border);
-  background: var(--color-bg);
+  background: var(--color-bg-alt);
+  color: var(--color-text-soft);
 }
 
 .site-footer__inner {
@@ -1112,17 +1296,16 @@ textarea {
   align-items: center;
   gap: 1rem;
   font-size: 0.82rem;
-  color: var(--color-text-soft);
 }
 
 .back-to-top {
-  color: var(--color-accent);
-  font-weight: 500;
+  color: var(--color-pop);
+  font-weight: 600;
   transition: color var(--duration-fast) ease;
 }
 
 .back-to-top:hover {
-  color: var(--color-accent-light);
+  color: var(--color-ink);
 }
 
 /* ——— Scroll Reveal ——— */
@@ -1194,10 +1377,10 @@ textarea {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.75rem;
-    background: rgba(14, 21, 18, 0.95);
+    background: var(--color-panel-bg);
     backdrop-filter: blur(20px);
     border: 1px solid var(--color-border);
-    box-shadow: var(--shadow-soft);
+    box-shadow: var(--shadow-lift);
     transform: translateY(-8px);
     opacity: 0;
     pointer-events: none;
@@ -1224,7 +1407,7 @@ textarea {
     border-top: 1px solid var(--color-border);
   }
 
-  .navbar__action-btn {
+  .navbar__action-btn:not(.navbar__action-btn--icon) {
     flex: 1;
   }
 
@@ -1268,8 +1451,11 @@ textarea {
 /* ============================================================
    CV IMPRIMABLE — mise en page dédiée (une page), visible
    uniquement à l'impression / export PDF via le bouton
-   "Imprimer le CV". Reprend les couleurs et polices du
-   portfolio (dégradé émeraude → violet, Sora/Inter).
+   "Imprimer le CV". Reprend la charte ISIS du portfolio (bleu
+   principal #2f0d73, dégradé violet → magenta → corail utilisé
+   avec parcimonie, Plus Jakarta Sans) sur un fond blanc économe
+   en encre. Couleurs volontairement codées en dur (indépendantes
+   du thème clair/sombre à l'écran, jamais imprimé).
    ============================================================ */
 
 .print-cv {
@@ -1302,7 +1488,7 @@ textarea {
   .print-cv {
     display: block !important;
     font-family: var(--font-body);
-    color: #17211c;
+    color: #1a1a1a;
     background: #fff;
   }
 
@@ -1322,10 +1508,10 @@ textarea {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: #0a6e46;
+    color: #2f0d73;
     padding-bottom: 1.3mm;
     margin-bottom: 2.5mm;
-    border-bottom: 1px solid #0a6e46;
+    border-bottom: 1px solid #2f0d73;
   }
 
   .cv-block + .cv-block {
@@ -1333,13 +1519,13 @@ textarea {
     break-inside: avoid;
   }
 
-  /* — En-tête : photo + nom, dégradé de marque — */
+  /* — En-tête : photo + nom, dégradé de marque ISIS — */
   .cv-header {
     display: flex;
     align-items: center;
     gap: 9mm;
     padding: 8.5mm 14mm;
-    background: linear-gradient(135deg, #0a6e46, #4a3a8a);
+    background: linear-gradient(135deg, #7c50de 0%, #ac54c7 55%, #f56960 100%);
     color: #fff;
   }
 
@@ -1364,7 +1550,7 @@ textarea {
     font-weight: 800;
     letter-spacing: -0.02em;
     text-transform: uppercase;
-    color: #fff;
+    color: #2f0d73;
   }
 
   .cv-header__identity p {
@@ -1372,7 +1558,7 @@ textarea {
     font-size: 10.5pt;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(47, 13, 115, 0.85);
   }
 
   /* — Corps : colonne latérale + colonne principale — */
@@ -1384,7 +1570,7 @@ textarea {
   .cv-sidebar {
     width: 65mm;
     flex-shrink: 0;
-    background: #eef5f1;
+    background: #f4f1fb;
     padding: 8mm 8mm;
   }
 
@@ -1411,7 +1597,7 @@ textarea {
   }
 
   .cv-contact-list a {
-    color: #17211c;
+    color: #1a1a1a;
     text-decoration: none;
   }
 
@@ -1420,7 +1606,7 @@ textarea {
     font-size: 7.2pt;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #5c6b62;
+    color: #5c5c5c;
     margin-bottom: 0.4mm;
   }
 
@@ -1428,7 +1614,7 @@ textarea {
   .cv-lang-scale {
     font-size: 7.2pt !important;
     font-style: italic;
-    color: #5c6b62;
+    color: #5c5c5c;
     margin: -1.5mm 0 2mm !important;
   }
 
@@ -1440,7 +1626,7 @@ textarea {
   }
 
   .cv-lang-row span:last-child {
-    color: #5c6b62;
+    color: #5c5c5c;
     font-size: 8pt;
     font-weight: 600;
   }
@@ -1448,14 +1634,14 @@ textarea {
   .cv-bar {
     height: 1.8mm;
     border-radius: 999px;
-    background: #d7e3dc;
+    background: #dcdcdc;
     overflow: hidden;
   }
 
   .cv-bar__fill {
     display: block;
     height: 100%;
-    background: linear-gradient(90deg, #0a6e46, #4a3a8a);
+    background: linear-gradient(90deg, #7c50de 0%, #ac54c7 55%, #f56960 100%);
     border-radius: inherit;
   }
 
@@ -1495,7 +1681,7 @@ textarea {
     width: 1.5mm;
     height: 1.5mm;
     border-radius: 999px;
-    background: #0a6e46;
+    background: #2f0d73;
   }
 
   /* — Colonne latérale : QR code vers le portfolio en ligne — */
@@ -1514,7 +1700,7 @@ textarea {
   .cv-qr__code {
     width: 21mm;
     height: 21mm;
-    border: 1px solid #d7e3dc;
+    border: 1px solid #dcdcdc;
     border-radius: 2mm;
     background: #fff;
   }
@@ -1522,14 +1708,14 @@ textarea {
   .cv-qr__caption {
     font-size: 7.8pt !important;
     line-height: 1.25;
-    color: #2b352f;
+    color: #2b2b2b;
     max-width: 56mm;
     white-space: nowrap;
   }
 
   .cv-qr__url {
     font-size: 7.6pt !important;
-    color: #0a6e46;
+    color: #2f0d73;
     font-weight: 600;
     word-break: break-all;
   }
@@ -1538,7 +1724,7 @@ textarea {
   .cv-main .cv-block p {
     font-size: 9.3pt;
     line-height: 1.45;
-    color: #2b352f;
+    color: #2b2b2b;
   }
 
   .cv-entry-list {
@@ -1561,7 +1747,7 @@ textarea {
     gap: 2mm;
     font-size: 10pt;
     font-weight: 700;
-    color: #17211c;
+    color: #1a1a1a;
     line-height: 1.3;
   }
 
@@ -1569,7 +1755,7 @@ textarea {
   .cv-entry-tags {
     font-weight: 500;
     font-size: 8.2pt;
-    color: #5c6b62;
+    color: #5c5c5c;
     white-space: nowrap;
   }
 
@@ -1587,7 +1773,7 @@ textarea {
     padding-left: 3.4mm;
     font-size: 9pt;
     line-height: 1.4;
-    color: #2b352f;
+    color: #2b2b2b;
   }
 
   .cv-bullets li::before {
@@ -1598,6 +1784,6 @@ textarea {
     width: 1.5mm;
     height: 1.5mm;
     border-radius: 999px;
-    background: #4a3a8a;
+    background: #2f0d73;
   }
 }

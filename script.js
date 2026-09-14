@@ -40,6 +40,35 @@ if (navbarToggle && navbarLinks) {
   });
 }
 
+// ——— Thème clair/sombre ———
+// Le thème est déjà appliqué avant le premier rendu par le script inline
+// dans <head> (anti-flash) ; ce bloc se contente de brancher le bouton et
+// de persister le choix. La clé doit rester synchronisée avec celle du
+// script inline.
+const THEME_STORAGE_KEY = "portfolio-theme";
+const themeToggleBtn = document.getElementById("theme-toggle-btn");
+
+function setTheme(theme) {
+  const resolved = theme === "light" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", resolved);
+  if (themeToggleBtn) {
+    themeToggleBtn.setAttribute("aria-pressed", String(resolved === "light"));
+  }
+  try {
+    localStorage.setItem(THEME_STORAGE_KEY, resolved);
+  } catch (error) {
+    // localStorage indisponible (mode privé, etc.) : on ignore silencieusement.
+  }
+}
+
+if (themeToggleBtn) {
+  themeToggleBtn.setAttribute("aria-pressed", String(document.documentElement.getAttribute("data-theme") === "light"));
+  themeToggleBtn.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark";
+    setTheme(current === "light" ? "dark" : "light");
+  });
+}
+
 // ——— Dynamic year ———
 const yearSpan = document.getElementById("year");
 if (yearSpan) {
@@ -96,6 +125,7 @@ const translationsEn = {
   "label-contact": "Contact",
   "nav-toggle-aria": "Open menu",
   "nav-print-btn": "Print resume",
+  "theme-toggle-aria": "Toggle theme",
 
   "hero-kicker": "Engineering student · Computer Science & E-health",
   "hero-subtitle": `Final-year (5th-year) engineering student at <strong>ISIS Castres</strong>, in <strong>Computer Science</strong> specializing in <strong>Health Information Systems</strong>, and following an advanced specialization track in <strong>Artificial Intelligence</strong>. I design software and data solutions to improve patient care pathways.`,
